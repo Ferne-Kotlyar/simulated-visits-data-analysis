@@ -1,0 +1,89 @@
+---
+title: "Simulated Visits 2024 Figure"
+output: pdf_document
+---
+
+# 1. Source Fruit Set Data Cleaning Script
+```{r}
+source("Fruit_Set_Data_Cleaning_2025.R")
+```
+
+# 2. Calculate Proportion and Standard Error
+```{r}
+calculate_prop_se <- function(df, empty_df){
+  
+  # Group by treatment and date
+  empty_df <- df %>%
+    group_by(treatment, fruit_set) %>%
+    summarize(count = n(), .groups = 'drop') %>%
+    spread(key = fruit_set, value = count, fill = 0)
+  
+  # Add a total column
+  empty_df$treated <- (empty_df$Yes + empty_df$No)
+  
+  # Create a proportion column
+  empty_df <- empty_df %>%
+    mutate(proportion = Yes / treated)
+  
+  # Calculate Standard Error
+  empty_df <- empty_df %>%
+    mutate(standard_error = sqrt((proportion * (1 - proportion)) / treated))
+  
+}
+
+All_Combined_Summary <- calculate_prop_se(All_Combined, All_Combined_Summary)
+```
+
+## 3. Prepare Data
+```{r}
+# Filter out all self-nectar treatments (and self-nectar controls)
+Simulated_Visits_PRM <- Simulated_Visits %>% filter(treatment_type == "PRM")
+
+# Remove dead plants (only found in old pots)
+Simulated_Visits_PRM <- Simulated_Visits_PRM %>%
+  filter(patch != "old_pots")
+
+# Summarize PRM fruit set data
+PRM_Summary <- calculate_prop_se(Simulated_Visits_PRM, PRM_Summary)
+
+# Factor (order treatments)
+PRM_Summary <- PRM_Summary %>%  
+  mutate(treatment = factor(treatment, levels = c("Ctrl", "ND", "N", "SW", "NN")))
+
+# Add significance symbols to the PRM_Summary
+PRM_Summary$sigificance <- c("n.s.", "**", "", "**", "**")
+```
+
+# 4. Plot
+```{r}
+# Plot
+Poll_Exp_2025_Plot <-
+  ggplot(PRM_Summary, aes(x=treatment, y=proportion)) +
+  geom_text(aes(label = paste0("n = ", treated), y = proportion + 
+                standard_error + 0.008), vjust = 0, size = 4) +
+  geom_errorbar(aes(ymin = proportion - standard_error, 
+                  ymax = proportion + standard_error), width=0.1) +
+  geom_point(size = 2.5, color = "white") +
+  geom_text(aes(label = sigificance,
+                y = proportion + standard_error + 0.024),  
+            vjust = 0, size = 3.8, na.rm = TRUE) +
+  geom_point() +
+  theme_classic(base_size = 14)  +
+  theme(legend.position = "none") +
+  labs(y= "Proportion of flowers that developped into fruits", 
+     x = "Treatment") +
+  scale_x_discrete(labels = c("Ctrl" = "Open pollination", 
+                              "ND" = "Simulated visit", 
+                              "N" = "Nectar", 
+                              "SW" = "Sugar water", 
+                              "NN" = "Bill insertion"))
+Poll_Exp_2025_Plot
+
+# Save plot
+ggsave('Poll_Exp_2025_Plot.png', 
+       Poll_Exp_2025_Plot, 
+       bg='transparent', 
+       path="../../Figures", 
+       height = 5, 
+       width = 9)
+```

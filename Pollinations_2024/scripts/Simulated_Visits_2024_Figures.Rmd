@@ -1,0 +1,85 @@
+---
+title: "Simulated Visits 2024 Figures"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+# 1.0 Load Data
+
+```{r message=FALSE}
+source("Fruit_Set_Data_Cleaning_2024.R")
+```
+
+**PRM_Trio_Strict:** Subset of the data that contains pollinations done in March - June 2024 with 3 treatments:
+
+- ND: Nectar Drop, renamed to Simulated Visits, contains only treatments with far pollen (not self or near-neighbour)
+- HPO: Hand Pollination Only, renamed to hand pollination
+- NE: Nectar Extraction
+
+# 2.0 Calculate Proportion and Standard Error
+
+```{r}
+Calculate_Prop_SE <- function(dataset) {
+  
+  # Group by treatment and date
+  dataset_Summary <- dataset %>%
+    group_by(Treatment, Fruit_Set) %>%
+    summarize(count = n(), .groups = 'drop') %>%
+    spread(key = Fruit_Set, value = count, fill = 0)
+  
+  # Add a total column
+  dataset_Summary$Treated <- (dataset_Summary$Yes + dataset_Summary$No)
+  
+  # Create a proportion column
+  dataset_Summary <- dataset_Summary %>%
+    mutate(Proportion = Yes / Treated)
+  dataset_Summary
+  
+  # Calculate Standard Error
+  dataset_Summary <- dataset_Summary %>%
+    mutate(Standard_Error = sqrt((Proportion * (1 - Proportion)) / Treated))
+
+}
+
+PRM_Trio_Strict_Summary <- Calculate_Prop_SE(PRM_Trio_Strict)
+PRM_Trio_Strict_Summary
+```
+
+# 3.0 Plot
+
+```{r}
+# Reorder treatments
+PRM_Trio_Strict_Summary$Treatment <- 
+  factor(PRM_Trio_Strict_Summary$Treatment, 
+         levels = c("HPO", "NE", "ND"))
+
+# Add significance symbols to the PRM_Summary
+PRM_Trio_Strict_Summary$sigificance <- c("*", "", "*")
+
+Poll_Exp_2024_Plot <- ggplot(PRM_Trio_Strict_Summary, 
+       aes(x=Treatment, y=Proportion)) +
+  geom_text(aes(label = paste0("n = ", Treated), y = Proportion + 
+                Standard_Error + 0.006), vjust = 0, size = 4) +
+  geom_errorbar(aes(ymin = Proportion - Standard_Error, 
+                  ymax = Proportion + Standard_Error), width=0.1) +
+  geom_point(size = 2.5, color = "white") +
+  geom_text(aes(label = sigificance,
+              y = Proportion + Standard_Error + 0.024),  
+          vjust = 0, size = 3.8, na.rm = TRUE) +
+  geom_point() +
+  theme_classic(base_size = 14)  +
+  theme(legend.position = "none") +
+  labs(y= "Proportion of flowers that developped into fruits", 
+     x = "Treatment") +
+  scale_x_discrete(labels = c("HPO" = "Hand pollination", 
+                              "ND" = "Simulated visit", 
+                              "NE" = "Nectar extraction"))
+
+Poll_Exp_2024_Plot
+```
+
+# 4.0 Save Plot
+
+```{r}
+ggsave('Poll_Exp_2024_Plot.png', Poll_Exp_2024_Plot, bg='transparent', path="../../Figures", height = 5, width = 9)
+```

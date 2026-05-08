@@ -1,0 +1,202 @@
+---
+title: "Simulated Visits 2025 Stats"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+# 1.0 Load Data
+
+## 1.1 Source Data Cleaning Script
+
+The following script combines all the pollination data from the 2025 field season. It includes all pollinations combined with fruit set. The season was split into two experiments: 
+
+- PRM: Pollinator Recognition Mechanims which had 5 treatments (simulated visits/nectar drop, open pollination, nectar, no nectar, and sugar water)
+- Self Nectar: Later in the season, we added an additional treatment (self nectar and open pollination as a control) to make sure that there was no difference between using another flower's nectar (as we did in the PRM experiment) and self nectar. We repeated the nectar treatment using the same methods as in the PRM experiment only with self nectar instead of another flower's nectar.
+
+```{r message=FALSE}
+source("Fruit_Set_Data_Cleaning_2025.R")
+```
+
+## 1.2 Data Prep
+```{r}
+# Filter out all self-nectar treatments (and self-nectar controls)
+Simulated_Visits_PRM <- Simulated_Visits %>% 
+  filter(treatment_type == "PRM")
+
+# Remove dead patch
+Simulated_Visits_PRM <- Simulated_Visits_PRM %>%
+  filter(patch != "old_pots")
+
+# Set ND as the reference group
+Simulated_Visits_PRM$treatment <- Simulated_Visits_PRM$treatment %>% 
+  factor(c("ND", "N", "SW", "NN", "Ctrl"), 
+         levels = c("ND", "N", "SW", "NN", "Ctrl"))
+```
+
+Note: All plants in the "Old_Pots" patch died. Not a single fruit was produced in either of these two inflorescences. These were the only plants that were potted in the entire experiment (in an attempt to increase sample size), all other plants were grown naturally (without human intervention). For this reason, this patch was removed from the experiment.
+
+# 2.0 Run Model
+
+## 2.1 GLMM
+
+### Model Notes
+
+- **Model:** Generalized Linear Mixed Model (GLMM) with a binomial error distribution and a logit link.
+- **Response Variable:** fruit_set_binary (binary fruit set). Indicates whether a flower developed into a mature fruit (yes or no).
+- **Explanatory Variable:** Treatment. There were 5 treatments listed above and described in the README.
+- **Random Effects:**
+  - Plant_ID: Takes into account the inflorescence that the flower belonged to.
+  - Patch: Takes into account inflorescence location.
+- **Reference Group:** ND (nectar drop/simulated visits) was set as the reference group.
+
+```{r}
+# Set ND as the reference group
+Simulated_Visits_PRM$treatment <- Simulated_Visits_PRM$treatment %>% 
+  factor(c("ND", "N", "SW", "NN", "Ctrl"), 
+         levels = c("ND", "N", "SW", "NN", "Ctrl"))
+
+# Run model
+library(lme4)
+
+glmm_Simulated_Visits_PRM <- glmer(fruit_set_binary ~ treatment + 
+                                     (1|plant_id) + (1|patch), 
+                                   data = Simulated_Visits_PRM, 
+                                   family=binomial(link="logit"))
+summary(glmm_Simulated_Visits_PRM)
+
+MuMIn::r.squaredGLMM(glmm_Simulated_Visits_PRM)
+car::Anova(glmm_Simulated_Visits_PRM, type="III", test.statistic="Chisq")
+```
+
+## 2.2 Check Model Assumptions
+```{r}
+library(DHARMa)
+sim_res <- simulateResiduals(fittedModel = glmm_Simulated_Visits_PRM)
+plot(sim_res)
+
+testUniformity(sim_res) # uniformity
+testDispersion(sim_res) # dispersion
+testZeroInflation(sim_res) # zero inflation
+testOutliers(sim_res) # outliers
+
+# Check residuals against predictors
+plotResiduals(sim_res, Simulated_Visits_PRM$treatment)
+plotResiduals(sim_res, Simulated_Visits_PRM$patch)
+```
+
+## 2.3 Odds Ratio
+```{r}
+# Pairwise ratios between treatments
+library(emmeans)
+
+# Odds ratio
+emm_PRM <- emmeans(glmm_Simulated_Visits_PRM, ~ treatment)
+emm_PRM_odds <- pairs(emm_PRM, type = "response")
+emm_PRM_odds_df <- as.data.frame(emm_PRM_odds)
+emm_PRM_odds_CI <- as.data.frame(confint(emm_PRM_odds))
+
+# Merge tables
+odds_PRM_ratio_df <- merge(emm_PRM_odds_df, emm_PRM_odds_CI, 
+                       by = c("contrast", "odds.ratio", "SE", "df")) %>%
+  select(-c("null", "df"))
+
+odds_PRM_ratio_df
+```
+
+# 3.0 Self Nectar Treatment
+
+## 3.1 Use full dataset (Simulated_Visits)
+
+```{r}
+# Remove dead patch
+Simulated_Visits <- Simulated_Visits %>%
+  filter(patch != "old_pots")
+```
+
+## 3.2 Compare Controls
+
+There were controls in both March (the initial PRM experiment) and April (the added self-nectar experiment) to ensure that there was no temporal bias. 
+
+```{r}
+# Filter for control treatment
+Simulated_Visits_Control <- Simulated_Visits %>% filter(treatment == "Ctrl")
+
+# Chi-squared
+table(Simulated_Visits_Control$treatment_type, 
+      Simulated_Visits_Control$fruit_set)
+chisq.test(table(Simulated_Visits_Control$treatment_type, 
+                 Simulated_Visits_Control$fruit_set))
+
+# Fisher's exact test (for small counts)
+fisher.test(table(Simulated_Visits_Control$treatment_type, 
+                  Simulated_Visits_Control$fruit_set))
+```
+
+## 3.3 Compare Nectar Treatments
+
+Compare the Nectar treatment (with nectar from far flowers) to the self-nectar treatment (with nectar from another flower on the same inflorescence).
+
+```{r}
+# Filter for control treatment
+Simulated_Visits_Nectar <- Simulated_Visits %>% filter(treatment_combined == "N")
+
+# Chi-squared
+table(Simulated_Visits_Nectar$treatment, Simulated_Visits_Nectar$fruit_set)
+chisq.test(table(Simulated_Visits_Nectar$treatment, Simulated_Visits_Nectar$fruit_set))
+
+# Fisher's exact test (for small counts)
+fisher.test(table(Simulated_Visits_Nectar$treatment, Simulated_Visits_Nectar$fruit_set))
+```
+There is no difference (at all) between the nectar and self-nectar treatments, therefore we are safe to merge the treatments.
+
+# 3.4 Run GLMM Model
+
+This is the same model as above, only with the addition of the self-nectar treatment and the associated self-nectar controls.
+
+```{r}
+# Set ND as the reference group
+Simulated_Visits$treatment_combined <- Simulated_Visits$treatment_combined %>% 
+  factor(c("ND", "N", "SW", "NN", "Ctrl"), 
+         levels = c("ND", "N", "SW", "NN", "Ctrl"))
+
+# Run model
+glmm_Simulated_Visits <- glmer(fruit_set_binary ~ treatment_combined + 
+                                 (1|plant_id) + (1|patch), 
+                               data = Simulated_Visits, 
+                               family=binomial(link="logit"))
+summary(glmm_Simulated_Visits)
+
+MuMIn::r.squaredGLMM(glmm_Simulated_Visits)
+car::Anova(glmm_Simulated_Visits, type="III", test.statistic="Chisq")
+```
+
+# 3.5 Check Model Assumptions
+```{r}
+sim_res <- simulateResiduals(fittedModel = glmm_Simulated_Visits)
+plot(sim_res)
+
+testUniformity(sim_res) # uniformity
+testDispersion(sim_res) # dispersion
+testZeroInflation(sim_res) # zero inflation
+testOutliers(sim_res) # outliers
+
+# Check residuals against predictors
+plotResiduals(sim_res, Simulated_Visits$treatment_combined)
+plotResiduals(sim_res, Simulated_Visits$patch)
+```
+
+## 3.6 Odds Ratio
+```{r}
+# Pairwise ratios between treatments
+emm <- emmeans(glmm_Simulated_Visits, ~ treatment_combined)
+emm_odds <- pairs(emm, type = "response")
+emm_odds_df <- as.data.frame(emm_odds)
+emm_odds_CI <- as.data.frame(confint(emm_odds))
+
+# Merge tables
+odds_ratio_df <- merge(emm_odds_df, emm_odds_CI, 
+                       by = c("contrast", "odds.ratio", "SE", "df")) %>%
+  select(-c("null", "df"))
+
+odds_ratio_df
+```

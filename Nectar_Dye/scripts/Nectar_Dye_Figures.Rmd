@@ -1,0 +1,135 @@
+---
+title: "Species Dye Figures"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+### Acronyms
+
+- ND: Nectar Dye
+- RS: Reproductive Structures
+
+# 1.0 Import and Prep Data
+
+## 1.0 Import Data
+
+```{r}
+source("Nectar_Dye_Data_Cleaning.R")
+```
+
+## 1.2 Function for Data Prep
+
+```{r}
+# Function to prep data and calculate proportions
+prep_data_for_plotting <- function(col){
+  
+  Output_table <- 
+    as.data.frame.matrix(table(species_ND$foraging, 
+                               species_ND[[col]])) %>%
+    tibble::rownames_to_column("foraging") %>%
+    pivot_longer(cols = c("No", "Yes"), 
+                 names_to = "response", values_to = "count") %>%
+    group_by(foraging) %>%
+    # calculate position of count text (so that it's in the middle of the boxes)
+    mutate(prop = count / sum(count),
+           ypos = rev(cumsum(rev(prop))) - prop / 2)
+  
+  Output_table
+}
+```
+
+## 1.3 Function for Plotting
+
+```{r}
+make_foraging_plot <- function(table, type){
+  
+  output_plot <- 
+  ggplot(table, aes(x=.data[[type]], y=prop)) +
+    geom_text(aes(label = paste0("n = ", total), y = prop + 
+                  standard_error + 0.05), vjust = 0, size = 4) +
+    geom_errorbar(aes(ymin = prop - standard_error, 
+                    ymax = prop + standard_error), width=0.1) +
+    geom_point(size = 2.5, color = "white") +
+    geom_point() +
+    theme_classic(base_size = 14)  +
+    theme(legend.position = "none") +
+    labs(y= "Proportion of flowers with dye", 
+       x = "Bill type") +
+    scale_x_discrete(labels = c(
+      "trapliner" = "Specialist", 
+      "territorial" = "Generalist",
+      "rep_struc" = "Reproductive structures", 
+      "stigma" = "Stigma")) +
+    ylim(0,1.05) +
+    scale_y_continuous(limits = c(0, 1.05), breaks = seq(0, 1, by = 0.25))
+}
+```
+
+## 1.4 Prep Data
+
+```{r}
+# Reproductive Structures
+foraging_RS <- prep_data_for_plotting("dye_on_rep_strucs")
+
+foraging_RS_prop <- foraging_RS %>% 
+  group_by(foraging) %>%
+  mutate(total = sum(count)) %>%
+  filter(response == "Yes") %>% 
+  mutate(standard_error = sqrt((prop * (1 - prop)) / total)) %>% 
+  select(-ypos)
+
+# Stigma
+foraging_stigma <- prep_data_for_plotting("dye_on_stigma_binary")
+
+foraging_stigma_prop <- foraging_stigma %>% 
+  group_by(foraging) %>%
+  mutate(total = sum(count)) %>%
+  filter(response == "Yes") %>% 
+  mutate(standard_error = sqrt((prop * (1 - prop)) / total)) %>% 
+  select(-ypos)
+```
+
+# 2.0 Plot
+
+## 2.1 Create Plots
+
+```{r}
+# Mark tables
+foraging_RS_prop$surface <- "rep_struc"
+foraging_stigma_prop$surface <- "stigma"
+
+# Combine tables
+foraging_table <- rbind(foraging_RS_prop, foraging_stigma_prop)
+
+# Reproductive structures
+plot_RS <- make_foraging_plot(foraging_RS_prop, "foraging") +
+  ggtitle("a) Reproductive structures")
+  
+# Stigma
+plot_Stigma <- make_foraging_plot(foraging_stigma_prop, "foraging") +
+  ggtitle("b) Stigma")
+```
+
+## 2.2 Combine Plots
+
+```{r}
+library(officer)
+library(patchwork)
+
+nectar_dye_plot <-
+plot_RS + plot_Stigma + 
+  plot_layout(axes = 'collect')
+
+nectar_dye_plot
+```
+
+## 2.3 Save Combined Plot
+
+```{r}
+ggsave('Nectar_Dye_Plot.png', 
+       nectar_dye_plot, 
+       bg='transparent', 
+       path="../../Figures", 
+       height = 5, 
+       width = 9)
+```

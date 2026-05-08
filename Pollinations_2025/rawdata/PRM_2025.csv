@@ -1,0 +1,398 @@
+patch,plant_id,bract,treatment,pollen_donor,poll_date,poll_time,num_above_tape,nectar_source,coll_date,coll_time,donor_state,removed,notes
+K3,528,4,ND,526,04-Mar,9:31:00 AM,9,N/A,05-Mar,1:53,covered,N,
+K3,529,1,NN,774,04-Mar,9:41:00 AM,11,N/A,05-Mar,1:52,covered,N,
+K3,529,2,HP,531,04-Mar,9:45:00 AM,8,N/A,05-Mar,1:52,covered,Y,
+K1,530,2,N,526,04-Mar,10:14:00 AM,11,526,05-Mar,1:57,covered,N,Nectar taken from 2 flowers of the same inflorescence
+K1,530,4,SD,774,04-Mar,10:20:00 AM,7,N/A,05-Mar,1:58,covered,Y,
+K2,532,1,SW,531,04-Mar,10:30:00 AM,10,N/A,05-Mar,1:55,covered,N,
+K2,533,2,Ctrl,N/A,04-Mar,10:35:00 AM,1,N/A,05-Mar,1:56,N/A,N,
+K1,534,1,Ctrl,N/A,05-Mar,9:01:00 AM,4,N/A,N/A,N/A,N/A,N,
+K1,535,1,SW,531,05-Mar,9:12:00 AM,13,N/A,06-Mar,2:45,covered,N,
+K1,535,2,SD,770,05-Mar,9:18:00 AM,16,N/A,06-Mar,2:46,covered,Y,
+K1,535,5,HP,527,05-Mar,9:21:00 AM,12,N/A,N/A,N/A,covered,Y,Treatment removed
+K2,532,7,N,774,05-Mar,9:30:00 AM,7,774,06-Mar,2:44,covered,N,
+K2,536,1,NN,531,05-Mar,9:35:00 AM,2,N/A,06-Mar,2:41,covered,N,
+K2,536,2,ND,770,05-Mar,9:41:00 AM,0,N/A,06-Mar,2:42,covered,N,
+K3,528,6,SW,527,05-Mar,9:46:00 AM,10,N/A,06-Mar,2:36,covered,N,
+K3,537,1,Ctrl,N/A,05-Mar,9:49:00 AM,12,N/A,06-Mar,2:37,N/A,N,
+K3,538,2,SD,774,05-Mar,9:54:00 AM,2,N/A,06-Mar,2:39,covered,Y,Treatment removed
+K3,538,3,HP,531,05-Mar,9:57:00 AM,0,N/A,06-Mar,2:40,covered,Y,
+K2,532,3,NN,527,06-Mar,9:39:00 AM,7,N/A,07-Mar,2:48,covered,N,
+K2,532,5,ND,542,06-Mar,9:43:00 AM,12,N/A,07-Mar,2:49,open,N,
+K3,529,1,NN,541,06-Mar,9:48:00 AM,N/A,N/A,N/A,N/A,open,N,Lost flower
+K3,538,1,N,542,06-Mar,9:53:00 AM,4,543,N/A,N/A,open,N,
+K3,537,2,Ctrl,N/A,06-Mar,9:56:00 AM,10,N/A,07-Mar,2:52,N/A,N,
+K1,530,1,SW,527,06-Mar,10:03:00 AM,9,N/A,07-Mar,2:45,covered,N,
+K1,535,4,N,541,06-Mar,10:08:00 AM,8,527,07-Mar,2:46,open,N,
+K1,534,4,Ctrl,N/A,06-Mar,10:10:00 AM,0,N/A,07-Mar,2:47,N/A,N,Hole at the base of the flower
+old_pots,774,5,SD,543,06-Mar,10:18:00 AM,10,N/A,N/A,N/A,covered,Y,
+old_pots,774,6,HP,542,06-Mar,10:23:00 AM,8,N/A,N/A,N/A,open,Y,"Ugly flower, moist. Removed treatment"
+tinamu,544,1,ND,543,06-Mar,10:37:00 AM,4,N/A,07-Mar,2:59,covered,N,
+K1,545,1,NN,527,06-Mar,11:03:00 AM,8,N/A,07-Mar,2:43,covered,N,
+K1,545,3,SW,542,06-Mar,11:06:00 AM,6,N/A,07-Mar,2:44,open,N,
+K1,545,4,SD,541,06-Mar,11:10:00 AM,4,N/A,N/A,N/A,open,Y,
+old_pots,547,7,ND,548,07-Mar,9:32:00 AM,1,N/A,08-Mar,2:46,covered,N,
+KT,770,3,NN,546,07-Mar,9:44:00 AM,11,N/A,08-Mar,2:43,open,N,Flower had lots of nectar
+KT,770,2,N,527,07-Mar,9:48:00 AM,9,548,08-Mar,2:42,covered,N,
+KT,770,5,SW,548,07-Mar,9:52:00 AM,6,N/A,08-Mar,2:44,covered,N,Sugar water is 3 days old
+K1,530,3,ND,549,07-Mar,10:09:00 AM,10,N/A,08-Mar,2:05,covered,N,
+K1,535,3,NN,527,07-Mar,10:13:00 AM,14,N/A,08-Mar,2:06,covered,N,
+K1,550,2,Ctrl,N/A,07-Mar,10:17:00 AM,2,N/A,08-Mar,2:08,N/A,N,
+K1,545,2,N,546,07-Mar,10:24:00 AM,4,527,08-Mar,2:09,open,N,
+K1,551,2,SW,548,07-Mar,10:31:00 AM,10,N/A,08-Mar,2:10,covered,N,Sugar water is 3 days old
+K1,551,4,ND,549,07-Mar,10:35:00 AM,8,N/A,08-Mar,2:11,covered,N,
+K2,532,1,SW,546,07-Mar,10:40:00 AM,N/A,N/A,08-Mar,2:13,open,N,Sugar water is 3 days old
+K2,532,2,NN,527,07-Mar,10:44:00 AM,15,N/A,08-Mar,2:14,covered,N,
+K2,552,1,Ctrl,N/A,07-Mar,10:46:00 AM,6,N/A,08-Mar,2:15,N/A,N,
+K2,536,2,ND,549,07-Mar,10:49:00 AM,N/A,N/A,08-Mar,2:17,covered,N,
+K3,528,9,N,546,07-Mar,10:57:00 AM,8,549,N/A,N/A,open,N,
+K3,553,2,NN,549,07-Mar,11:03:00 AM,10,N/A,08-Mar,2:22,covered,N,
+K3,554,2,SW,527,07-Mar,11:11:00 AM,16,N/A,08-Mar,2:24,covered,N,
+K3,554,3,N,546,07-Mar,11:14:00 AM,18,538,08-Mar,2:24,open,N,
+K3,554,6,ND,527,07-Mar,11:19:00 AM,14,N/A,08-Mar,2:25,covered,N,Fruit in bract look good
+K2,555,1,Ctrl,N/A,07-Mar,11:24:00 AM,18,N/A,08-Mar,2:18,N/A,N,
+K2,560,1,Ctrl,N/A,07-Mar,11:26:00 AM,17,N/A,08-Mar,2:19,N/A,N,
+old_pots,774,4,NN,531,08-Mar,8:29:00 AM,8,N/A,09-Mar,3:44,covered,N,
+old_pots,547,5,N,556,08-Mar,8:35:00 AM,10,526,09-Mar,3:44,covered,N,
+old_pots,547,6,SW,546,08-Mar,8:39:00 AM,7,N/A,09-Mar,8:39,covered,N,
+KT,770,1,ND,526,08-Mar,8:46:00 AM,9,N/A,09-Mar,3:41,covered,N,
+K1,530,2,N,527,08-Mar,8:56:00 AM,N/A,531,09-Mar,3:33,covered,N,
+K1,535,5,ND,531,08-Mar,9:03:00 AM,11,N/A,09-Mar,3:34,covered,N,
+K1,534,3,Ctrl,N/A,08-Mar,9:05:00 AM,2,N/A,09-Mar,3:38,covered,N,
+K1,557,4,NN,556,08-Mar,9:13:00 AM,2,N/A,09-Mar,3:39,covered,N,Eaten
+K2,533,2,Ctrl,N/A,08-Mar,9:16:00 AM,N/A,N/A,09-Mar,3:27,covered,N,
+K2,552,4,Ctrl,N/A,08-Mar,9:19:00 AM,2,N/A,09-Mar,3:29,covered,N,
+K2,543,1,SW,526,08-Mar,9:23:00 AM,3,N/A,09-Mar,3:30,covered,N,
+K2,543,2,NN,546,08-Mar,9:26:00 AM,3,N/A,09-Mar,3:31,covered,N,Stigma tip is brown at pollination
+K2,555,5,Ctrl,N/A,08-Mar,9:32:00 AM,9,N/A,09-Mar,3:32,covered,N,Eaten
+K3,528,7,NN,527,08-Mar,9:40:00 AM,9,N/A,09-Mar,3:17,covered,N,
+K3,554,8,NN,556,08-Mar,9:44:00 AM,8,N/A,09-Mar,3:19,covered,N,Flower doesn't have pollen
+K3,529,5,N,526,08-Mar,9:51:00 AM,7,527,09-Mar,3:16,covered,N,
+K3,537,1,Ctrl,N/A,08-Mar,9:52:00 AM,N/A,N/A,09-Mar,3:20,covered,N,
+K3,537,5,Ctrl,N/A,08-Mar,9:54:00 AM,2,N/A,09-Mar,3:21,covered,N,
+K3,538,2,ND,556,08-Mar,10:00:00 AM,4,N/A,09-Mar,3:22,covered,N,
+K2,558,5,SW,527,08-Mar,10:07:00 AM,0,N/A,09-Mar,3:25,covered,N,
+tinamu,544,2,N,531,09-Mar,7:48:00 AM,4,541,10-Mar,1:26,covered,N,
+tinamu,561,3,SW,548,09-Mar,7:56:00 AM,0,N/A,10-Mar,2:07,covered,N,Inflorescence is warped
+tinamu,561,3,SW,541,09-Mar,7:58:00 AM,0,N/A,10-Mar,2:07,covered,N,There were two open flowers in the same bract
+old_pots,774,2,ND,527,09-Mar,8:11:00 AM,15,N/A,10-Mar,2:12,covered,N,
+old_pots,774,6,N,548,09-Mar,8:18:00 AM,10,531,10-Mar,2:12,covered,N,Used to be HP
+old_pots,774,8,SW,531,09-Mar,8:24:00 AM,6,N/A,10-Mar,2:13,covered,N,
+KT,770,4,ND,548,09-Mar,8:31:00 AM,11,N/A,10-Mar,2:15,covered,N,
+KT,770,6,NN,527,09-Mar,8:36:00 AM,9,N/A,10-Mar,2:15,covered,N,
+K1,535,1,SW,541,09-Mar,8:41:00 AM,N/A,N/A,10-Mar,2:19,covered,N,
+K1,535,2,N,531,09-Mar,8:48:00 AM,18,548,10-Mar,2:20,covered,N,Used to be SD
+K1,535,4,N,527,09-Mar,8:53:00 AM,N/A,548,10-Mar,2:20,covered,N,
+K1,535,6,ND,541,09-Mar,8:56:00 AM,6,N/A,10-Mar,2:21,covered,N,
+K1,534,2,Ctrl,N/A,09-Mar,8:59:00 AM,4,N/A,10-Mar,2:22,covered,N,
+K1,534,4,Ctrl,N/A,09-Mar,8:58:00 AM,N/A,N/A,10-Mar,2:22,covered,N,
+K1,545,1,NN,531,09-Mar,9:04:00 AM,N/A,N/A,10-Mar,2:24,covered,N,Tip of stigma is dark
+K1,551,5,N,527,09-Mar,9:10:00 AM,10,551,10-Mar,2:25,covered,N,527 has moist pollen
+K1,557,1,ND,531,09-Mar,9:17:00 AM,8,N/A,10-Mar,2:26,covered,N,
+K2,532,3,NN,541,09-Mar,9:21:00 AM,N/A,N/A,10-Mar,2:27,covered,N,
+K2,533,1,Ctrl,N/A,09-Mar,9:22:00 AM,4,N/A,10-Mar,2:28,covered,N,
+K2,552,3,Ctrl,N/A,09-Mar,9:24:00 AM,2,N/A,10-Mar,2:29,covered,N,
+K2,536,1,NN,531,09-Mar,9:26:00 AM,N/A,N/A,10-Mar,2:30,covered,N,
+K3,528,6,SW,541,09-Mar,9:31:00 AM,N/A,N/A,10-Mar,2:32,covered,N,
+K3,538,1,N,541,09-Mar,9:38:00 AM,N/A,551,10-Mar,2:33,covered,N,
+K2,555,2,Ctrl,N/A,09-Mar,9:40:00 AM,17,N/A,N/A,N/A,covered,N,Lost flower
+K2,558,1,ND,531,09-Mar,9:44:00 AM,6,N/A,10-Mar,2:31,covered,N,
+K1,534,1,Ctrl,N/A,09-Mar,9:45:00 AM,N/A,N/A,10-Mar,2:22,covered,N,
+old_pots,547,4,NN,546,10-Mar,8:08:00 AM,9,N/A,11-Mar,2:48,covered,N,"Bad flower, ugly, has no pollen"
+KT,770,5,SW,548,10-Mar,8:12:00 AM,N/A,N/A,11-Mar,2:44,covered,N,
+K1,530,1,SW,526,10-Mar,8:22:00 AM,N/A,N/A,11-Mar,1:59,covered,N,
+K1,530,3,ND,527,10-Mar,8:23:00 AM,N/A,N/A,11-Mar,2:00,covered,N,
+K1,530,4,NN,527,10-Mar,8:24:00 AM,9,N/A,11-Mar,2:00,covered,N,Used to be SD
+K1,545,3,SW,556,10-Mar,8:32:00 AM,N/A,N/A,11-Mar,2:01,covered,N,
+K1,545,4,ND,546,10-Mar,8:34:00 AM,5,N/A,11-Mar,2:01,covered,N,Used to be SD
+K1,551,4,ND,526,10-Mar,8:37:00 AM,N/A,N/A,11-Mar,2:02,covered,N,
+K1,557,3,N,527,10-Mar,8:41:00 AM,5,548,11-Mar,2:04,covered,N,
+K2,532,4,N,556,10-Mar,8:49:00 AM,7,546,11-Mar,1:54,covered,N,
+K2,532,5,ND,546,10-Mar,8:50:00 AM,N/A,N/A,11-Mar,1:54,covered,N,
+K2,532,6,SW,527,10-Mar,8:52:00 AM,4,N/A,11-Mar,1:55,covered,N,
+K2,536,2,ND,556,10-Mar,8:55:00 AM,N/A,N/A,11-Mar,1:57,covered,N,
+K2,536,3,N,546,10-Mar,8:59:00 AM,0,527,11-Mar,1:57,covered,N,
+K2,555,4,Ctrl,N/A,10-Mar,9:01:00 AM,10,N/A,11-Mar,1:52,covered,N,
+K2,558,4,NN,526,10-Mar,9:04:00 AM,2,N/A,11-Mar,1:53,covered,N,
+K3,554,1,NN,556,10-Mar,9:08:00 AM,21,N/A,11-Mar,1:49,covered,N,Bract has ripe fruit
+K3,554,4,N,526,10-Mar,9:14:00 AM,12,556,11-Mar,1:50,covered,N,
+K3,553,4,SW,527,10-Mar,9:17:00 AM,5,N/A,11-Mar,1:47,covered,N,
+K3,529,1,NN,556,10-Mar,9:20:00 AM,N/A,N/A,11-Mar,1:48,covered,N,
+K3,529,2,N,546,10-Mar,9:25:00 AM,10,548,11-Mar,9:27,covered,N,Used to be HP
+K3,537,2,Ctrl,N/A,10-Mar,9:26:00 AM,N/A,N/A,11-Mar,1:57,covered,N,
+K3,538,3,NN,546,10-Mar,9:29:00 AM,2,N/A,11-Mar,1:51,covered,N,
+K1,559,1,Ctrl,N/A,10-Mar,9:34:00 AM,18,N/A,11-Mar,2:49,covered,N,
+K1,559,4,Ctrl,N/A,10-Mar,9:35:00 AM,9,N/A,11-Mar,2:49,covered,N,
+K1,559,5,Ctrl,N/A,10-Mar,9:37:00 AM,11,N/A,11-Mar,2:50,covered,N,
+tower,526,2,N,531,11-Mar,7:26:00 AM,8,526,12-Mar,1:23,covered,N,
+tower,526,4,ND,548,11-Mar,7:30:00 AM,6,N/A,12-Mar,1:24,covered,N,
+old_pots,774,7,NN,526,11-Mar,7:46:00 AM,9,N/A,12-Mar,1:33,covered,N,
+old_pots,774,9,SW,548,11-Mar,7:50:00 AM,5,N/A,12-Mar,1:35,covered,N,Brown anthers
+old_pots,547,6,SW,531,11-Mar,7:56:00 AM,N/A,N/A,12-Mar,1:36,covered,N,Brown anthers | One bad flower removed
+old_pots,547,7,ND,548,11-Mar,8:01:00 AM,N/A,N/A,12-Mar,1:38,covered,N,Brown anthers
+KT,770,2,N,526,11-Mar,8:12:00 AM,N/A,531,12-Mar,1:43,covered,N,
+KT,770,3,NN,531,11-Mar,8:13:00 AM,N/A,N/A,12-Mar,1:44,covered,N,
+KT,770,6,NN,548,11-Mar,8:14:00 AM,N/A,N/A,12-Mar,1:45,covered,N,Had a flower yesterday
+KT,770,7,N,531,11-Mar,8:19:00 AM,10,548,12-Mar,1:47,covered,N,
+K1,530,2,N,526,11-Mar,8:35:00 AM,N/A,548,12-Mar,1:51,covered,N,
+K1,534,1,Ctrl,N/A,11-Mar,8:37:00 AM,N/A,N/A,12-Mar,2:00,covered,N,
+K1,534,3,Ctrl,N/A,11-Mar,8:37:00 AM,N/A,N/A,12-Mar,2:03,covered,N,
+K1,534,5,Ctrl,N/A,11-Mar,8:38:00 AM,0,N/A,12-Mar,2:04,covered,N,Brown anthers
+K1,550,2,Ctrl,N/A,11-Mar,8:38:00 AM,N/A,N/A,12-Mar,2:06,covered,N,
+K1,550,1,Ctrl,N/A,11-Mar,8:40:00 AM,4,N/A,12-Mar,2:07,covered,N,
+K1,545,2,N,526,11-Mar,8:42:00 AM,N/A,531,12-Mar,N/A,covered,N,Eaten
+K2,532,1,SW,531,11-Mar,8:49:00 AM,N/A,N/A,12-Mar,2:14,covered,N,
+K2,532,2,NN,526,11-Mar,8:50:00 AM,N/A,N/A,12-Mar,2:16,covered,N,
+K2,533,2,Ctrl,N/A,11-Mar,8:51:00 AM,N/A,N/A,12-Mar,2:17,covered,N,
+K2,552,1,Ctrl,N/A,11-Mar,8:52:00 AM,N/A,N/A,12-Mar,2:20,covered,N,
+K2,552,4,Ctrl,N/A,11-Mar,8:52:00 AM,N/A,N/A,12-Mar,2:21,covered,N,
+K2,543,2,NN,531,11-Mar,8:54:00 AM,N/A,N/A,12-Mar,2:23,covered,N,
+K2,558,2,N,526,11-Mar,9:03:00 AM,5,552,12-Mar,9:16,covered,N,
+K2,558,3,ND,531,11-Mar,9:06:00 AM,4,N/A,12-Mar,2:27,covered,N,
+K2,558,5,SW,526,11-Mar,9:09:00 AM,N/A,N/A,12-Mar,2:29,covered,N,
+K3,528,4,ND,531,11-Mar,9:14:00 AM,N/A,N/A,12-Mar,2:38,covered,N,1 fruit killed (bad flower)
+K3,554,2,SW,526,11-Mar,9:19:00 AM,N/A,N/A,12-Mar,2:42,covered,N,
+K3,554,3,N,531,11-Mar,9:20:00 AM,N/A,552,12-Mar,2:43,covered,N,
+K3,553,2,NN,526,11-Mar,9:26:00 AM,N/A,N/A,12-Mar,2:47,covered,N,
+K3,529,5,N,531,11-Mar,9:30:00 AM,N/A,552,12-Mar,2:48,covered,N,
+K3,537,1,Ctrl,N/A,11-Mar,9:31:00 AM,N/A,N/A,12-Mar,2:45,covered,N,
+K2,560,1,Ctrl,N/A,11-Mar,9:32:00 AM,N/A,N/A,12-Mar,2:50,covered,Y,
+tower,541,1,N,546,12-Mar,8:03:00 AM,2,562,13-Mar,2:46,covered,Y,Fruit eaten
+tinamu,561,4,NN,562,12-Mar,8:14:00 AM,0,N/A,13-Mar,2:55,covered,N,Eaten
+old_pots,547,5,N,531,12-Mar,8:21:00 AM,N/A,556,13-Mar,2:59,covered,N,
+old_pots,774,4,NN,556,12-Mar,8:23:00 AM,N/A,N/A,13-Mar,3:00,covered,N,
+old_pots,774,8,SW,527,12-Mar,8:25:00 AM,N/A,N/A,13-Mar,3:00,covered,N,"Eaten, only half left"
+KT,770,1,ND,546,12-Mar,8:30:00 AM,N/A,N/A,13-Mar,3:05,covered,N,
+KT,770,4,ND,531,12-Mar,8:32:00 AM,N/A,N/A,13-Mar,3:05,covered,N,
+K1,535,5,ND,562,12-Mar,8:42:00 AM,N/A,N/A,13-Mar,3:07,open,N,Forgot to put bill in father flower
+K1,535,6,ND,556,12-Mar,8:43:00 AM,N/A,N/A,13-Mar,3:09,covered,N,Forgot to put bill in father flower
+K1,534,2,Ctrl,N/A,12-Mar,8:46:00 AM,N/A,N/A,13-Mar,3:10,covered,N,"Ugly flower, brown anthers"
+K1,550,3,Ctrl,N/A,12-Mar,8:47:00 AM,1,N/A,13-Mar,3:10,covered,N,
+K1,559,3,Ctrl,N/A,12-Mar,8:50:00 AM,12,N/A,13-Mar,3:11,covered,N,
+K1,559,6,Ctrl,N/A,12-Mar,8:52:00 AM,11,N/A,13-Mar,3:12,covered,N,
+K1,557,1,ND,527,12-Mar,8:54:00 AM,N/A,N/A,13-Mar,3:12,covered,N,Lots of nectar
+K1,551,1,NN,546,12-Mar,8:57:00 AM,12,N/A,13-Mar,3:13,covered,N,
+K1,551,3,SW,531,12-Mar,9:00:00 AM,6,N/A,13-Mar,3:14,covered,N,
+K1,545,1,NN,562,12-Mar,9:02:00 AM,N/A,N/A,13-Mar,3:15,open,N,
+K1,545,4,ND,556,12-Mar,9:04:00 AM,N/A,N/A,13-Mar,3:15,covered,N,
+K2,533,4,Ctrl,N/A,12-Mar,9:06:00 AM,0,N/A,13-Mar,3:17,covered,N,
+K2,552,3,Ctrl,N/A,12-Mar,9:06:00 AM,N/A,N/A,13-Mar,3:18,covered,N,
+K2,543,1,SW,527,12-Mar,9:09:00 AM,N/A,N/A,13-Mar,3:18,covered,N,
+K2,536,1,NN,546,12-Mar,9:12:00 AM,N/A,N/A,13-Mar,3:19,covered,N,
+K2,536,3,N,531,12-Mar,9:14:00 AM,N/A,546,13-Mar,3:19,covered,N,
+K2,558,1,ND,556,12-Mar,9:20:00 AM,N/A,N/A,13-Mar,3:20,covered,N,
+K2,558,6,N,562,12-Mar,9:23:00 AM,0,531,13-Mar,3:21,open,N,
+K3,528,6,SW,556,12-Mar,9:32:00 AM,N/A,N/A,13-Mar,3:22,covered,N,Style stayed on fruit
+K3,528,7,NN,562,12-Mar,9:35:00 AM,N/A,N/A,13-Mar,3:23,open,N,
+K3,528,2,N,546,12-Mar,9:30:00 AM,17,527,13-Mar,3:23,covered,N,Tip of stigma is brown | Style stayed on fruit
+K3,554,8,NN,531,12-Mar,9:37:00 AM,N/A,N/A,13-Mar,3:24,covered,N,
+K3,538,3,NN,556,12-Mar,9:43:00 AM,N/A,N/A,13-Mar,3:25,covered,N,
+K3,538,4,SW,562,12-Mar,9:45:00 AM,1,N/A,13-Mar,3:25,open,N,
+K2,533,1,Ctrl,N/A,12-Mar,9:46:00 AM,N/A,N/A,13-Mar,3:17,covered,N,
+tower,526,1,SW,531,13-Mar,7:57:00 AM,10,N/A,14-Mar,2:35,covered,N,
+tower,526,3,NN,548,13-Mar,8:00:00 AM,8,N/A,14-Mar,2:35,covered,N,
+tinamu,544,3,SW,556,13-Mar,8:09:00 AM,3,N/A,14-Mar,2:39,covered,N,
+tinamu,561,4,NN,546,13-Mar,8:12:00 AM,N/A,N/A,14-Mar,2:40,covered,N,Open flower yesterday | Crazy inflorescence
+old_pots,774,5,N,527,13-Mar,8:19:00 AM,11,548,14-Mar,2:43,covered,N,Removed one fruit in the bract
+old_pots,774,6,N,548,13-Mar,8:21:00 AM,N/A,531,14-Mar,2:46,covered,N,
+KT,770,5,SW,531,13-Mar,8:26:00 AM,N/A,N/A,14-Mar,2:48,covered,N,
+K1,530,1,SW,556,13-Mar,8:40:00 AM,N/A,N/A,14-Mar,2:51,covered,N,
+K1,530,3,ND,546,13-Mar,8:42:00 AM,N/A,N/A,14-Mar,2:52,covered,N,
+K1,535,1,SW,527,13-Mar,8:46:00 AM,N/A,N/A,14-Mar,2:52,covered,N,
+K1,535,7,SW,531,13-Mar,8:47:00 AM,10,N/A,14-Mar,2:53,covered,N,
+K1,534,5,Ctrl,N/A,13-Mar,8:48:00 AM,N/A,N/A,14-Mar,2:53,covered,N,
+K1,550,2,Ctrl,N/A,13-Mar,8:48:00 AM,N/A,N/A,14-Mar,2:53,covered,N,
+K1,545,2,N,556,13-Mar,8:51:00 AM,N/A,527,14-Mar,2:54,covered,N,
+K1,545,3,SW,546,13-Mar,8:52:00 AM,N/A,N/A,14-Mar,2:55,covered,N,
+K1,551,4,ND,527,13-Mar,8:55:00 AM,N/A,N/A,14-Mar,2:55,covered,N,
+K1,557,3,N,531,13-Mar,8:58:00 AM,N/A,546,14-Mar,2:56,covered,N,
+K1,559,1,Ctrl,N/A,13-Mar,8:59:00 AM,N/A,N/A,14-Mar,2:56,covered,N,
+K1,559,4,Ctrl,N/A,13-Mar,8:59:00 AM,N/A,N/A,14-Mar,2:57,covered,N,Eaten
+K1,559,5,Ctrl,N/A,13-Mar,8:59:00 AM,N/A,N/A,14-Mar,2:58,covered,N,Open flower yesterday | Eaten
+K2,532,4,N,556,13-Mar,9:03:00 AM,N/A,548,14-Mar,8:43,covered,N,Removed one fruit
+K2,532,3,NN,546,13-Mar,9:04:00 AM,N/A,N/A,14-Mar,2:58,covered,N,
+K2,536,2,ND,527,13-Mar,9:09:00 AM,N/A,N/A,14-Mar,3:00,covered,N,
+K2,555,1,Ctrl,N/A,13-Mar,9:10:00 AM,N/A,N/A,14-Mar,3:00,covered,N,
+K2,555,2,Ctrl,N/A,13-Mar,9:10:00 AM,N/A,N/A,14-Mar,3:01,covered,N,
+K2,558,4,NN,531,13-Mar,9:16:00 AM,N/A,N/A,14-Mar,3:01,covered,N,
+K3,528,1,ND,556,13-Mar,9:26:00 AM,13,N/A,14-Mar,3:02,covered,N,2 Mature fruits | Style stuck to fruit
+K3,529,1,NN,546,13-Mar,9:31:00 AM,N/A,N/A,14-Mar,3:03,covered,N,
+K3,529,2,N,556,13-Mar,9:33:00 AM,N/A,527,14-Mar,8:33,covered,N,
+K3,529,3,SW,531,13-Mar,9:36:00 AM,10,N/A,14-Mar,8:36,covered,N,"Bad plant, looks sad and mouldy"
+K3,538,2,ND,546,13-Mar,9:42:00 AM,N/A,N/A,14-Mar,3:04,covered,N,
+K3,538,3,NN,556,13-Mar,9:43:00 AM,N/A,N/A,14-Mar,3:04,covered,N,Open flower yesterday
+K3,563,1,Ctrl,N/A,13-Mar,9:50:00 AM,20,N/A,14-Mar,3:05,covered,N,
+tower,526,2,N,531,14-Mar,7:40:00 AM,N/A,546,15-Mar,3:27,covered,N,
+tower,526,4,ND,546,14-Mar,7:42:00 AM,N/A,N/A,15-Mar,3:27,covered,N,
+tower,526,5,N,546,14-Mar,7:45:00 AM,2,562,15-Mar,3:28,covered,N,
+tinamu,561,3,SW,527,14-Mar,7:54:00 AM,N/A,N/A,15-Mar,3:24,covered,N,
+old_pots,547,4,NN,562,14-Mar,7:59:00 AM,N/A,N/A,15-Mar,3:19,covered,N,
+old_pots,547,6,SW,531,14-Mar,8:01:00 AM,N/A,N/A,15-Mar,3:20,covered,N,"No pollen on flower, dark anthers"
+old_pots,547,7,ND,546,14-Mar,8:02:00 AM,N/A,N/A,15-Mar,3:20,covered,N,Dark anthers
+KT,770,2,N,527,14-Mar,8:09:00 AM,N/A,531,15-Mar,3:15,covered,N,
+KT,770,3,NN,562,14-Mar,8:10:00 AM,N/A,N/A,15-Mar,3:15,covered,N,
+KT,770,7,N,531,14-Mar,8:13:00 AM,N/A,546,15-Mar,3:16,covered,N,
+K3,554,1,NN,546,14-Mar,8:22:00 AM,N/A,N/A,15-Mar,2:56,covered,N,Style stuck to fruit
+K3,554,3,N,527,14-Mar,8:26:00 AM,N/A,562,15-Mar,2:56,covered,N,
+K3,554,4,N,562,14-Mar,8:29:00 AM,N/A,527,15-Mar,2:56,covered,N,Style stuck to fruit
+K3,553,4,SW,531,14-Mar,8:32:00 AM,N/A,N/A,15-Mar,2:52,covered,N,
+K3,529,5,N,546,14-Mar,8:35:00 AM,N/A,N/A,15-Mar,2:54,covered,N,Bad inflorescence
+K3,538,4,SW,527,14-Mar,8:40:00 AM,N/A,N/A,15-Mar,2:58,covered,N,
+K2,532,1,SW,562,14-Mar,8:44:00 AM,N/A,N/A,15-Mar,2:59,covered,N,
+K2,532,2,NN,531,14-Mar,8:46:00 AM,N/A,N/A,15-Mar,2:59,covered,N,
+K2,532,5,ND,546,14-Mar,8:47:00 AM,N/A,N/A,15-Mar,3:00,covered,N,
+K2,532,6,SW,527,14-Mar,8:50:00 AM,N/A,N/A,15-Mar,3:00,covered,N,"Dark flower, fungus on flower"
+K2,533,2,Ctrl,N/A,14-Mar,8:52:00 AM,N/A,N/A,15-Mar,3:01,covered,N,
+K2,533,4,Ctrl,N/A,14-Mar,8:52:00 AM,N/A,N/A,15-Mar,3:01,covered,N,
+K2,552,1,Ctrl,N/A,14-Mar,8:53:00 AM,N/A,N/A,15-Mar,3:02,covered,N,
+K2,552,4,Ctrl,N/A,14-Mar,8:53:00 AM,N/A,N/A,15-Mar,3:03,covered,N,
+K2,543,1,SW,562,14-Mar,8:56:00 AM,N/A,N/A,15-Mar,3:03,covered,N,
+K2,543,2,NN,546,14-Mar,8:57:00 AM,N/A,N/A,15-Mar,3:04,covered,N,
+K2,543,5,ND,527,14-Mar,8:59:00 AM,0,N/A,15-Mar,3:05,covered,N,
+K2,555,5,Ctrl,N/A,14-Mar,9:01:00 AM,N/A,N/A,15-Mar,3:05,covered,N,
+K2,558,5,SW,562,14-Mar,9:03:00 AM,N/A,N/A,15-Mar,3:06,covered,N,
+K2,558,6,N,546,14-Mar,9:05:00 AM,N/A,527,15-Mar,3:07,covered,N,Lots of nectar
+K1,530,4,NN,527,14-Mar,9:09:00 AM,N/A,N/A,15-Mar,3:09,covered,N,
+K1,535,4,N,562,14-Mar,9:13:00 AM,N/A,527,15-Mar,3:10,covered,N,
+K1,534,1,Ctrl,N/A,14-Mar,9:14:00 AM,N/A,N/A,15-Mar,3:10,covered,N,Style eaten
+K1,534,3,Ctrl,N/A,14-Mar,9:14:00 AM,N/A,N/A,15-Mar,3:11,covered,N,
+K1,551,2,SW,546,14-Mar,9:20:00 AM,N/A,N/A,15-Mar,3:12,covered,N,
+K1,557,4,NN,527,14-Mar,9:22:00 AM,N/A,N/A,15-Mar,3:13,covered,N,
+tinamu,561,4,NN,556,15-Mar,5:27:00 AM,N/A,556,16-Mar,3:18,covered,N,
+tinamu,564,2,N,531,15-Mar,5:34:00 AM,1,556,16-Mar,3:19,covered,N,
+old_pots,547,3,SW,556,15-Mar,5:41:00 AM,13,N/A,16-Mar,3:14,covered,N,
+KT,770,1,ND,531,15-Mar,5:46:00 AM,N/A,N/A,16-Mar,3:11,covered,N,
+KT,770,4,ND,556,15-Mar,5:48:00 AM,N/A,N/A,16-Mar,3:12,covered,N,
+KT,770,6,NN,531,15-Mar,5:50:00 AM,N/A,N/A,16-Mar,3:12,covered,N,
+K3,528,2,N,556,15-Mar,5:55:00 AM,N/A,531,16-Mar,2:52,covered,N,Not so much nectar
+K3,528,6,SW,531,15-Mar,5:57:00 AM,N/A,N/A,16-Mar,2:53,covered,N,Style stuck to fruit
+K3,554,2,SW,556,15-Mar,6:06:00 AM,N/A,N/A,16-Mar,2:55,covered,N,Bract left open | Style stuck to fruit
+K3,554,6,ND,531,15-Mar,6:09:00 AM,N/A,N/A,16-Mar,2:55,covered,N,Fruit of one bad flower removed
+K3,529,3,SW,556,15-Mar,6:12:00 AM,N/A,N/A,16-Mar,2:51,covered,N,
+K3,553,6,ND,531,15-Mar,6:21:00 AM,9,N/A,16-Mar,2:49,covered,N,
+K3,553,2,NN,556,15-Mar,6:23:00 AM,N/A,N/A,16-Mar,2:50,covered,N,
+K3,537,2,Ctrl,N/A,15-Mar,6:24:00 AM,N/A,N/A,16-Mar,2:56,covered,N,
+K3,537,5,Ctrl,N/A,15-Mar,6:24:00 AM,N/A,N/A,16-Mar,2:57,covered,N,
+K2,555,4,Ctrl,N/A,15-Mar,6:27:00 AM,N/A,N/A,16-Mar,2:57,covered,N,
+K2,558,1,ND,N/A,15-Mar,6:31:00 AM,N/A,N/A,16-Mar,2:58,covered,N,
+K2,558,3,ND,556,15-Mar,6:33:00 AM,N/A,N/A,16-Mar,2:59,covered,N,
+K2,536,1,NN,527,15-Mar,6:20:00 AM,N/A,N/A,16-Mar,3:01,covered,N,
+K2,536,3,N,556,15-Mar,6:23:00 AM,N/A,565,16-Mar,3:02,covered,N,
+K2,533,3,Ctrl,N/A,15-Mar,6:31:00 AM,2,N/A,16-Mar,3:00,covered,N,
+K2,533,5,Ctrl,N/A,15-Mar,6:31:00 AM,0,N/A,16-Mar,3:00,covered,N,
+K1,530,2,N,556,15-Mar,5:32:00 AM,N/A,556,16-Mar,3:03,covered,N,
+K1,534,2,Ctrl,N/A,15-Mar,5:38:00 AM,N/A,N/A,16-Mar,3:03,covered,N,
+K1,545,1,NN,527,15-Mar,5:41:00 AM,N/A,N/A,16-Mar,3:05,covered,N,
+K1,545,3,SW,556,15-Mar,5:46:00 AM,N/A,N/A,16-Mar,3:06,covered,N,
+K1,545,4,ND,527,15-Mar,5:52:00 AM,N/A,N/A,16-Mar,3:06,covered,N,
+K1,551,3,SW,556,15-Mar,5:56:00 AM,N/A,N/A,16-Mar,3:06,covered,N,
+K1,557,1,ND,527,15-Mar,6:00:00 AM,N/A,N/A,16-Mar,3:07,covered,N,
+K1,557,3,N,556,15-Mar,6:08:00 AM,N/A,565,16-Mar,3:07,covered,N,
+K1,559,3,Ctrl,N/A,15-Mar,6:10:00 AM,N/A,N/A,16-Mar,3:08,covered,N,
+K1,550,3,Ctrl,N/A,15-Mar,6:12:00 AM,N/A,N/A,16-Mar,3:09,covered,N,
+tower,526,1,SW,548,16-Mar,7:25:00 AM,N/A,N/A,17-Mar,1:14,covered,N,
+tower,526,3,NN,531,16-Mar,7:27:00 AM,N/A,N/A,17-Mar,1:15,covered,N,
+tower,526,4,ND,546,16-Mar,7:30:00 AM,N/A,N/A,17-Mar,1:16,covered,N,
+tower,526,5,N,566,16-Mar,7:32:00 AM,N/A,527,17-Mar,1:16,covered,N,
+tinamu,561,3,SW,527,16-Mar,7:39:00 AM,N/A,N/A,17-Mar,1:19,covered,N,
+tinamu,561,5,N,548,16-Mar,7:42:00 AM,0,546,17-Mar,1:19,covered,N,
+KT,770,5,SW,531,16-Mar,7:51:00 AM,N/A,N/A,17-Mar,1:23,covered,N,Style stuck to fruit
+K3,528,7,NN,546,16-Mar,7:55:00 AM,N/A,N/A,17-Mar,1:25,covered,N,Style stuck to fruit
+K3,554,8,NN,566,16-Mar,7:58:00 AM,N/A,N/A,17-Mar,1:26,covered,N,
+K3,553,5,N,527,16-Mar,8:02:00 AM,7,548,17-Mar,1:27,covered,N,Terrible plant
+K3,529,1,NN,531,16-Mar,8:05:00 AM,N/A,N/A,17-Mar,1:27,covered,N,
+K3,529,2,N,546,16-Mar,8:08:00 AM,N/A,566,17-Mar,1:28,covered,N,
+K3,538,3,NN,566,16-Mar,8:12:00 AM,N/A,N/A,17-Mar,1:29,covered,N,Covered in aphids
+K2,532,4,N,527,16-Mar,8:17:00 AM,N/A,531,17-Mar,1:30,covered,N,
+K2,536,2,ND,531,16-Mar,8:21:00 AM,N/A,N/A,17-Mar,1:31,covered,N,
+K2,536,4,SW,546,16-Mar,8:24:00 AM,1,N/A,17-Mar,1:31,covered,N,
+K2,558,2,N,566,16-Mar,8:27:00 AM,N/A,N/A,17-Mar,1:32,covered,N,
+K2,558,4,NN,527,16-Mar,8:29:00 AM,N/A,N/A,17-Mar,1:32,covered,N,
+K2,558,5,SW,531,16-Mar,8:31:00 AM,N/A,N/A,17-Mar,1:33,covered,N,
+K2,558,7,NN,546,16-Mar,8:33:00 AM,0,N/A,17-Mar,1:34,covered,N,
+K1,535,1,SW,566,16-Mar,8:37:00 AM,N/A,N/A,17-Mar,1:35,covered,N,
+K1,535,5,ND,527,16-Mar,8:39:00 AM,N/A,N/A,17-Mar,1:35,covered,N,
+K1,535,6,ND,531,16-Mar,8:41:00 AM,N/A,N/A,17-Mar,1:35,covered,N,
+K1,535,7,SW,546,16-Mar,8:44:00 AM,N/A,N/A,17-Mar,1:36,covered,N,1 fruit/flower removed
+K1,534,3,Ctrl,N/A,16-Mar,8:45:00 AM,N/A,N/A,17-Mar,1:37,covered,N,Empty nectar chamber
+K1,550,2,Ctrl,N/A,16-Mar,8:46:00 AM,N/A,N/A,17-Mar,1:37,covered,N,
+K1,550,5,Ctrl,N/A,16-Mar,8:46:00 AM,0,N/A,17-Mar,1:38,covered,N,
+K1,545,2,N,566,16-Mar,8:49:00 AM,N/A,548,17-Mar,1:38,covered,N,
+K1,551,1,NN,527,16-Mar,8:51:00 AM,N/A,N/A,17-Mar,1:39,covered,N,
+K1,557,2,SW,531,16-Mar,8:55:00 AM,5,N/A,17-Mar,1:40,covered,N,
+K1,559,6,Ctrl,N/A,16-Mar,8:56:00 AM,N/A,N/A,17-Mar,1:41,covered,N,
+tower,526,2,N,548,17-Mar,7:40:00 AM,N/A,527,18-Mar,3:50,covered,N,
+old_pots,547,4,NN,556,17-Mar,7:48:00 AM,N/A,N/A,18-Mar,3:41,covered,N,
+KT,770,7,N,546,17-Mar,7:52:00 AM,N/A,531,18-Mar,3:38,covered,N,
+K3,528,4,ND,527,17-Mar,7:57:00 AM,N/A,N/A,18-Mar,2:44,covered,N,Removed 1 fruit
+K3,528,1,ND,531,17-Mar,8:00:00 AM,N/A,N/A,18-Mar,2:45,covered,N,Empty nectar chamber
+K3,554,1,NN,556,17-Mar,8:03:00 AM,N/A,N/A,18-Mar,2:49,covered,N,Style stuck to fruit
+K3,554,4,N,546,17-Mar,8:09:00 AM,N/A,556,18-Mar,2:51,covered,N,
+K3,554,5,SW,527,17-Mar,8:12:00 AM,11,N/A,18-Mar,2:52,covered,N,
+K3,553,4,SW,531,17-Mar,8:15:00 AM,N/A,N/A,18-Mar,2:54,covered,N,
+K3,529,4,ND,556,17-Mar,8:19:00 AM,11,N/A,N/A,N/A,covered,N,Lost flower
+K3,567,1,N,546,17-Mar,8:23:00 AM,0,548,18-Mar,2:58,covered,N,
+K3,538,4,SW,527,17-Mar,8:27:00 AM,N/A,N/A,18-Mar,3:00,covered,N,Ugly flower
+K2,532,1,SW,531,17-Mar,8:31:00 AM,N/A,N/A,18-Mar,3:02,covered,N,
+K2,532,2,NN,556,17-Mar,8:33:00 AM,N/A,N/A,18-Mar,3:03,covered,N,
+K2,532,3,NN,546,17-Mar,8:35:00 AM,N/A,N/A,18-Mar,3:04,covered,N,
+K2,532,5,ND,527,17-Mar,8:37:00 AM,N/A,N/A,18-Mar,3:05,covered,N,
+K2,533,2,Ctrl,N/A,17-Mar,8:38:00 AM,N/A,N/A,18-Mar,3:07,covered,N,
+K2,533,4,Ctrl,N/A,17-Mar,8:38:00 AM,N/A,N/A,18-Mar,3:09,covered,N,
+K2,552,1,Ctrl,N/A,17-Mar,8:39:00 AM,N/A,N/A,N/A,N/A,covered,N,"Removed, but there are 4 in the bract, so maybe it wasn't actually removed? It must have been added back"
+K2,552,3,Ctrl,N/A,17-Mar,8:39:00 AM,N/A,N/A,N/A,N/A,covered,N,"Removed, but there are 3 in the bract, so maybe it wasn't actually removed? It must have been added back"
+K2,543,2,NN,531,17-Mar,8:41:00 AM,N/A,N/A,18-Mar,3:11,covered,N,
+K2,543,5,ND,556,17-Mar,8:43:00 AM,N/A,N/A,18-Mar,3:12,covered,N,
+K2,536,5,N,546,17-Mar,8:46:00 AM,0,531,18-Mar,3:14,covered,N,
+K2,555,1,Ctrl,N/A,17-Mar,8:47:00 AM,N/A,N/A,N/A,N/A,covered,N,"Accidentally removed, then it must have been added back"
+K2,558,3,ND,527,17-Mar,8:49:00 AM,N/A,N/A,18-Mar,3:17,covered,N,
+K2,558,6,N,531,17-Mar,8:51:00 AM,N/A,556,18-Mar,3:18,covered,N,Nectar source from 546 and 556
+K2,560,2,Ctrl,N/A,17-Mar,8:52:00 AM,22,N/A,18-Mar,3:19,covered,N,
+K1,530,1,SW,531,17-Mar,8:11:00 AM,N/A,N/A,18-Mar,3:21,covered,N,
+K1,530,3,ND,556,17-Mar,8:15:00 AM,N/A,N/A,18-Mar,3:22,covered,N,
+K1,530,4,NN,531,17-Mar,8:17:00 AM,N/A,N/A,18-Mar,3:22,covered,N,
+K1,534,1,Ctrl,N/A,17-Mar,8:20:00 AM,N/A,N/A,18-Mar,3:26,covered,N,
+K1,534,5,Ctrl,N/A,17-Mar,8:20:00 AM,N/A,N/A,18-Mar,3:27,covered,N,
+K1,535,2,N,556,17-Mar,8:22:00 AM,N/A,548,18-Mar,3:24,covered,N,
+K1,557,4,NN,531,17-Mar,8:29:00 AM,N/A,N/A,18-Mar,3:32,covered,N,
+K1,559,1,Ctrl,N/A,17-Mar,8:31:00 AM,N/A,N/A,18-Mar,3:35,covered,N,
+K1,550,1,Ctrl,N/A,17-Mar,8:32:00 AM,N/A,N/A,18-Mar,3:29,covered,N,
+K1,550,4,Ctrl,N/A,17-Mar,8:34:00 AM,2,N/A,18-Mar,3:30,covered,N,
+tower,541,3,ND,566,18-Mar,7:52:00 AM,0,N/A,19-Mar,2:55,covered,N,
+tinamu,561,4,NN,556,18-Mar,8:01:00 AM,N/A,N/A,19-Mar,2:47,covered,N,
+tinamu,561,5,N,531,18-Mar,8:04:00 AM,N/A,527,19-Mar,2:48,covered,N,
+old_pots,547,6,SW,546,18-Mar,8:14:00 AM,N/A,N/A,19-Mar,2:40,covered,N,
+KT,770,2,N,527,18-Mar,8:36:00 AM,N/A,546,19-Mar,2:31,covered,N,
+KT,770,3,NN,556,18-Mar,8:39:00 AM,N/A,N/A,19-Mar,2:31,covered,N,
+KT,770,6,NN,566,18-Mar,8:37:00 AM,N/A,N/A,19-Mar,2:31,covered,N,
+K3,528,6,SW,531,18-Mar,8:49:00 AM,N/A,N/A,19-Mar,1:13,covered,N,
+K3,528,7,NN,546,18-Mar,8:51:00 AM,N/A,N/A,19-Mar,1:15,covered,N,
+K3,554,3,N,527,18-Mar,9:00:00 AM,N/A,566,19-Mar,1:20,covered,N,Lots of nectar placed on stigma
+K3,553,2,NN,556,18-Mar,9:07:00 AM,N/A,N/A,19-Mar,1:24,covered,N,
+K3,529,3,SW,556,18-Mar,9:14:00 AM,N/A,N/A,19-Mar,1:27,covered,N,
+K3,529,5,N,531,18-Mar,9:17:00 AM,N/A,556,19-Mar,1:26,covered,N,
+K3,537,2,Ctrl,N/A,18-Mar,9:25:00 AM,N/A,N/A,19-Mar,1:35,covered,N,
+K3,538,3,NN,546,18-Mar,9:29:00 AM,N/A,N/A,19-Mar,1:37,covered,N,Dark anthers
+K3,538,5,ND,527,18-Mar,9:33:00 AM,2,N/A,19-Mar,1:38,covered,N,Terrible flower upon collection
+K2,533,3,Ctrl,N/A,18-Mar,9:40:00 AM,N/A,N/A,19-Mar,1:43,covered,Y,Accidentally removed
+K2,533,5,Ctrl,N/A,18-Mar,9:40:00 AM,N/A,N/A,19-Mar,1:45,covered,N,
+K2,543,1,SW,566,18-Mar,9:46:00 AM,N/A,N/A,19-Mar,1:47,covered,N,
+K2,536,1,NN,531,18-Mar,9:48:00 AM,N/A,N/A,19-Mar,1:48,covered,N,
+K2,536,3,N,556,18-Mar,9:51:00 AM,N/A,531,19-Mar,1:49,covered,N,
+K2,558,1,ND,546,18-Mar,10:00:00 AM,N/A,N/A,19-Mar,1:52,covered,N,
+K2,558,4,NN,527,18-Mar,10:02:00 AM,N/A,N/A,19-Mar,1:52,covered,N,
+K1,535,4,N,566,18-Mar,10:16:00 AM,N/A,546,19-Mar,1:57,covered,N,
+K1,534,2,Ctrl,N/A,18-Mar,10:25:00 AM,N/A,N/A,19-Mar,2:00,covered,N,
+K1,550,3,Ctrl,N/A,18-Mar,10:28:00 AM,N/A,N/A,19-Mar,2:01,covered,N,
+K1,550,5,Ctrl,N/A,18-Mar,10:28:00 AM,N/A,N/A,19-Mar,2:02,covered,N,
+K1,545,4,ND,556,18-Mar,10:32:00 AM,N/A,N/A,19-Mar,2:04,covered,N,
+K1,557,1,ND,531,18-Mar,10:42:00 AM,N/A,N/A,19-Mar,2:08,covered,N,
+K2,536,2,ND,566,19-Mar,9:10:00 AM,N/A,N/A,20-Mar,3:06,covered,N,
+K1,551,6,ND,566,19-Mar,9:20:00 AM,9,N/A,20-Mar,3:05,covered,N,Removed row of fruits before it | Went in twice with the bill
+K2,558,3,ND,531,20-Mar,8:15:00 AM,N/A,N/A,21-Mar,11:02,covered,N,
+K2,558,5,SW,531,20-Mar,8:17:00 AM,N/A,N/A,21-Mar,11:03,covered,N,
+K2,558,6,N,531,20-Mar,8:19:00 AM,N/A,531,21-Mar,11:03,covered,N,Lots of nectar
+K1,551,1,NN,531,20-Mar,8:22:00 AM,N/A,N/A,21-Mar,10:18,covered,N,
+K1,551,4,ND,531,20-Mar,8:24:00 AM,N/A,N/A,21-Mar,10:20,covered,N,Lots of nectar in target flower
+K1,551,5,N,531,20-Mar,8:25:00 AM,N/A,531,21-Mar,10:21,covered,N,
+K2,533,3,Ctrl,N/A,21-Mar,11:24:00 AM,N/A,N/A,N/A,N/A,N/A,N,

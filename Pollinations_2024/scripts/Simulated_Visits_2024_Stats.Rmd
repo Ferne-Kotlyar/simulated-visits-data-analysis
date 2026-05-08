@@ -1,0 +1,91 @@
+---
+title: "Simulated Visits 2024 Stats"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+# 1.0 Load and Prep Data
+
+## 1.1 Load Data
+
+```{r message=FALSE}
+source("Fruit_Set_Data_Cleaning_2024.R")
+```
+
+PRM_Trio_Strict: Subset of the data that contains pollinations done in March - June 2024 with 3 treatments:
+
+- ND: Nectar Drop, renamed to Simulated Visits, contains only treatments with far pollen (not self or near-neighbour)
+- HPO: Hand Pollination Only, renamed to hand pollination
+- NE: Nectar Extraction
+
+## 1.2 Prep Data
+
+```{r}
+# Add a new column to convert Fruit_Set from categorical (Yes, No) to binary (0,1)
+PRM_Trio_Strict <- PRM_Trio_Strict %>% 
+  mutate(Binary_FS = if_else(Fruit_Set=="Yes", 1, 0))
+```
+
+# 2.0 Run Model
+
+## 2.1 GLMM
+
+### Model Notes
+
+- **Model:** Generalized Linear Mixed Model (GLMM) with a binomial error distribution and a logit link.
+- **Response Variable:** Binary_FS (binary fruit set). Indicates whether a flower developed into a mature fruit (yes or no).
+- **Explanatory Variable:** Treatment. There were 3 treatments listed above.
+- **Random Effects:**
+  - Plant_ID: Takes into account the inflorescence that the flower belonged to.
+  - Patch: Takes into account inflorescence location.
+- **Reference Group:** ND (nectar drop/simulated visits) was set as the reference group.
+
+```{r}
+# Set ND as the reference group
+PRM_Trio_Strict$Treatment <- PRM_Trio_Strict$Treatment %>% factor(c("ND", "NE", "HPO"), levels = c("ND", "NE", "HPO"))
+
+# Run model
+glmm_PRM_Trio_Strict <- glmer(Binary_FS ~ Treatment + (1|Plant_ID) + (1|Patch), data=PRM_Trio_Strict, family=binomial(link="logit"))
+summary(glmm_PRM_Trio_Strict)
+
+MuMIn::r.squaredGLMM(glmm_PRM_Trio_Strict)
+car::Anova(glmm_PRM_Trio_Strict, type="III", test.statistic="Chisq")
+```
+
+## 2.2 Check Model Assumptions
+```{r}
+library(DHARMa)
+sim_res <- simulateResiduals(fittedModel = glmm_PRM_Trio_Strict)
+plot(sim_res)
+
+testUniformity(sim_res) # uniformity
+testDispersion(sim_res) # dispersion
+testZeroInflation(sim_res) # zero inflation
+testOutliers(sim_res) # outliers
+
+# Check residuals against predictors
+plotResiduals(sim_res, PRM_Trio_Strict$Treatment)
+plotResiduals(sim_res, PRM_Trio_Strict$Patch)
+```
+
+## 2.3 Odds Ratio
+```{r}
+# Pairwise ratios between treatments
+library(emmeans)
+
+emm <- emmeans(glmm_PRM_Trio_Strict, ~ Treatment)
+emm_odds <- pairs(emm, type = "response")  
+  # exponentiates automatically 
+  # (takes the estimate and puts it to the exponent to get the odds)
+emm_odds_df <- as.data.frame(emm_odds)
+emm_odds_CI <- as.data.frame(confint(emm_odds))
+
+# Merge tables
+odds_ratio_df <- merge(emm_odds_df, 
+                       emm_odds_CI, 
+                       by = c("contrast", "odds.ratio", "SE", "df")) %>% 
+  select(-c("null", "df"))
+
+odds_ratio_df
+```
+

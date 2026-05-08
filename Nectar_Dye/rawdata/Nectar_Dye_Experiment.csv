@@ -1,0 +1,56 @@
+species,sex,dye_on_stigma,dye_on_anthers,flower,person,bill_stained,date,collection_time,dye_time,notes
+GREH,M,N,lots,open,Ferne,Unknown,13-Mar,11:00,13:00,
+GREH,M,N,lots,open,Mike,Unknown,13-Mar,11:00,13:00,
+GREH,F,lots,lots,open,Mike,Unknown,13-Mar,11:00,13:00,
+VISA,M,N,lots,open,Mike,Unknown,13-Mar,11:00,13:00,Had a drop of dye along the style
+VISA,F,little,lots,open,Mike,Unknown,13-Mar,11:00,13:00,
+RTAH,F,N,little,bagged,Mike,Unknown,13-Mar,11:00,13:00,Too much dye
+RTAH,M,N,N,bagged,Mike,Unknown,13-Mar,11:00,13:00,
+CRWO,M,N,N,bagged,Mike,Unknown,13-Mar,11:00,13:00,
+CRWO,F,N,N,treatment,Mike,Unknown,13-Mar,11:00,13:00,
+GREH,M,N,lots,open,Ferne,Y,14-Mar,11:00,13:00,
+GREH,F,N,lots,open,Ferne,Y,14-Mar,11:00,13:00,Dye leaking out of the flower
+VISA,M,N,little,open,Ferne,Y,14-Mar,11:00,13:00,
+VISA,F,little,little,open,Ferne,Y,14-Mar,11:00,13:00,
+RTAH,M,N,N,open,Ferne,N,14-Mar,11:00,13:00,
+RTAH,F,little,N,open,Ferne,Y,14-Mar,11:00,13:00,
+CRWO,M,N,N,open,Ferne,N,14-Mar,11:00,13:00,
+CRWO,F,N,N,bagged,Ferne,N,14-Mar,11:00,13:00,
+GREH,F,N,little,treatment,Mike,Y,14-Mar,11:00,13:00,Dye was low on the anthers
+VISA,M,M,little,treatment,Mike,N,14-Mar,11:00,13:00,"Some dyed pollen on the style, but not on the tip of the stigma"
+VISA,F,N,N,treatment,Mike,N,14-Mar,11:00,13:00,
+CRWO,F,lots,lots,open,Ferne,Y,15-Mar,11:00,11:00,Dye halfway up
+CRWO,M,N,N,open,Ferne,Y,15-Mar,11:00,11:00,Dye halfway up
+RTAH,F,N,N,open,Ferne,Y,15-Mar,11:00,11:00,
+RTAH,M,N,N,open,Ferne,N,15-Mar,11:00,11:00,
+VISA,F,little,lots,open,Ferne,Y,15-Mar,11:00,11:00,Style has a lot of dye | Bill might be too small for CR
+VISA,M,lots,lots,open,Ferne,Y,15-Mar,11:00,11:00,LOTS
+GREH,F,N,little,open,Ferne,Y,15-Mar,11:00,11:00,Style has little dye
+GREH,M,lots,little,open,Ferne,Y,15-Mar,11:00,11:00,
+CRWO,F,N/A,little,open,Ferne,Y,15-Mar,11:00,11:00,Style has lots of dye | Stigma is eaten!
+CRWO,M,N,N,treatment,Ferne,Y,15-Mar,11:00,11:00,Dye halfway up | Big flower | Anther brown | bill is only stained a little
+RTAH,F,N,N,treatment,Ferne,Y,15-Mar,11:00,11:00,
+RTAH,M,N,N,treatment,Mike,N,15-Mar,11:00,11:00,
+GREH,F,lots,lots,treatment,Mike,Y,15-Mar,11:00,11:00,
+GREH,M,little,little,treatment,Mike,N,15-Mar,11:00,11:00,Flower broken | Style has lots of dye | Not sure if I trust the lack of stain on the bill
+GREH,F,N,N,bagged,Ferne,Y,18-Mar,12:00,13:00,Dye halfway up | Style has a little dye
+GREH,M,N,lots,bagged,Ferne,Y,18-Mar,12:00,13:00,
+VISA,F,lots,lots,bagged,Ferne,Y,18-Mar,12:00,13:00,Lots of nectar (dilutes the dye) | Style has lots of dye
+VISA,M,lots,lots,bagged,Ferne,Y,18-Mar,12:00,13:00,Dye halfway up | Style has a lots of dye
+RTAH,F,N,little,open,Ferne,Y,18-Mar,12:00,13:00,Style has little dye low down
+RTAH,M,N,N,open,Ferne,N,18-Mar,12:00,13:00,
+CRWO,F,N,N,open,Ferne,Y,18-Mar,12:00,13:00,
+CRWO,M,N,N,bagged,Ferne,N,18-Mar,12:00,13:00,
+CRWO,F,N,N,open,Ferne,Y,29-Mar,16:00,17:00,Bill is only stained a little 
+CRWO,M,N,little,open,Ferne,Y,29-Mar,16:00,17:00,Bill is only stained a little 
+RTAH,F,N,N,open,Ferne,N,29-Mar,16:00,17:00,
+RTAH,M,N,N,open,Ferne,N,29-Mar,16:00,17:00,
+VISA,F,little,lots,open,Ferne,Y,29-Mar,16:00,17:00,Lots of dye!
+VISA,M,lots,lots,open,Ferne,Y,29-Mar,16:00,17:00,Went in twice | LOTS of dye
+CRWO,F,N,little,open,Mike,Y,02-Apr,11:30,14:00,Lots of dye on style
+CRWO,M,N,N,open,Mike,Y,02-Apr,11:30,14:00,2 pollen grains stained on the style
+RTAH,F,N,little,open,Mike,Y,02-Apr,11:30,14:00,Bill is likely too small for RTAH | 1 small cluster dyed
+RTAH,M,N,N,open,Mike,N,02-Apr,11:30,14:00,Bill is likely too small for RTAH
+VISA,F,N,Y,bagged,Mike,Y,02-Apr,11:30,14:00,Bill might be too small for VISA
+VISA,M,N,Y,bagged,Mike,Y,02-Apr,11:30,14:00,Bill might be too small for VISA
+GREH,F,lots,little,bagged,Mike,Y,02-Apr,11:30,14:00,Lots of nectar (dilutes the dye) 

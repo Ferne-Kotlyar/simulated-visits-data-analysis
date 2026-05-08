@@ -1,0 +1,78 @@
+---
+title: "Species Dye Experiments"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+# 1.0 Load Data
+
+## 1.1 Import Data
+```{r}
+source("Nectar_Dye_Data_Cleaning.R")
+
+head(species_ND)
+```
+
+The main data file is called "species_ND", where ND stands for "Nectar Dye".
+
+
+## 1.2 View Some Data Tables
+```{r}
+# View stigma by species
+paste("Dye on stigma:")
+table(species_ND$species, species_ND$dye_on_stigma)
+
+# View reproductive structures by species
+paste("Dye on reproductive structures:")
+table(species_ND$species, species_ND$dye_on_rep_strucs)
+```
+
+# 2.0 Analyses
+
+## 2.1 Foraging Strategy
+```{r}
+# Chi-Squared
+chisq.test(table(species_ND$foraging, species_ND$dye_on_anthers_binary))
+chisq.test(table(species_ND$foraging, species_ND$dye_on_rep_strucs))
+chisq.test(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
+
+# Try with fishers exact test (small count in territorials with dye on stigma)
+fisher.test(table(species_ND$foraging, species_ND$dye_on_anthers_binary))
+fisher.test(table(species_ND$foraging, species_ND$dye_on_rep_strucs))
+fisher.test(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
+
+# Cramer's V for effect size
+library(rstatix)
+cramer_v(table(species_ND$foraging, species_ND$dye_on_anthers_binary))
+cramer_v(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
+cramer_v(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
+```
+There is a significant difference in dye deposition between species based on foraging strategy in all cases.
+
+## 2.2 Species
+```{r}
+# Dye on stigma based on species
+chisq.test(table(species_ND$species, species_ND$dye_on_anthers_binary))
+chisq.test(table(species_ND$species, species_ND$dye_on_rep_strucs))
+chisq.test(table(species_ND$species, species_ND$dye_on_stigma_binary))
+
+# Fisher's test
+fisher.test(table(species_ND$species, species_ND$dye_on_anthers_binary))
+fisher.test(table(species_ND$species, species_ND$dye_on_rep_strucs))
+fisher.test(table(species_ND$species, species_ND$dye_on_stigma_binary))
+```
+There is a significant difference in dye deposition between species in all cases.
+
+## 2.3 Sex
+```{r}
+# Chi-squared differences between sexes
+chisq.test(table(species_ND$sex, species_ND$dye_on_anthers_binary))
+chisq.test(table(species_ND$sex, species_ND$dye_on_rep_strucs))
+chisq.test(table(species_ND$sex, species_ND$dye_on_stigma_binary))
+
+# Fisher's test
+fisher.test(table(species_ND$sex, species_ND$dye_on_anthers_binary))
+fisher.test(table(species_ND$sex, species_ND$dye_on_rep_strucs))
+fisher.test(table(species_ND$sex, species_ND$dye_on_stigma_binary))
+```
+There are no differences in dye deposition between sexes.
