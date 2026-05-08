@@ -9,7 +9,7 @@ Data, analysis, and documentation for the "Nectar deposition on stigma links tra
 
 This repository contains 4 main experiments.
 
-## 1.0 Pollinator Recognition in Heliconia
+## 1.0 Pollinator Recognition in Heliconia ([Aviaries](Aviaries))
 
 **Matching manuscript sections**
 
@@ -17,11 +17,11 @@ This repository contains 4 main experiments.
 - Methods Section 4.2: Replication of pollinator recognition
 - Methods Section 4.3: Replication of nectar extraction
 
-Here we show that while pollinator recognition (described by Betts et al., 2015) exists in *Heliconia tortuosa* and is reproducible, however the proposed nectar extraction mechanism is not.
+Here we show that while pollinator recognition (described by [Betts et al., 2015](https://www.pnas.org/doi/10.1073/pnas.1419522112)) exists in *Heliconia tortuosa* and is reproducible, however the proposed nectar extraction mechanism is not.
 
 ![**Manuscript Figure 2:** **Mean pollen tube abundance following different pollination treatments.** (a) Effect of hand pollination alone vs. hand pollination plus visitation from pollen-free specialist Green Hermits (*Phaethornis guy*) or generalist Rufous-tailed (*Amazilia tzacatl*) hummingbirds. (b) Effect of hand pollination alone vs. hand pollination combined with nectar extraction. Error bars represent ± 1 bootstrapped standard errors.](Figures/av_hpne_results_fig.png)
 
-## 2.0 Nectar Dye Experiments
+## 2.0 Nectar Dye Experiments ([Nectar Dye](Nectar_Dye))
 
 **Matching manuscript sections**
 
@@ -32,7 +32,7 @@ Here we show that nectar dye lands significantly more often on the reproductive 
 
 ![**Manuscript Figure 3:** **Mean proportion of flowers with dye deposited on the (a) reproductive structures and (b) stigma by visitor specialization**. Specialist species included Green Hermit (*Phaethornis guy*; *n* = 13) and Violet Sabrewing (*Campylopterus hemileucurus*; *n* = 14) hummingbirds; generalists species included Crowned Woodnymph (*Thalurania colombica*; *n* =14) and Rufous-tailed (*Amazilia tzacatl*; *n* = 14) hummingbirds. Error bars represent ± 1 SE of the sample proportion.](Figures/Nectar_Dye_Plot.png)
 
-## 3.0 Pollination Experiments 2024
+## 3.0 Pollination Experiments 2024 ([Pollinations 2024](Pollinations_2024))
 
 **Matching manuscript sections**
 
@@ -43,7 +43,7 @@ Here we show that hand pollinations with simulated specialist hummingbird visits
 
 ![**Manuscript Figure A5:** **Pollination experiment comparing simulated Green Hermit hummingbird visits, hand pollination, and nectar extraction treatments.** Points show the proportion of flowers that developed into fruit (scored as binary yes/no), with error bars representing ± 1 SE of the sample proportion. Sample sizes are indicated above each error bar. Asterisks denote statistically significant differences from the simulated visit treatment (\*: p \< 0.05).](Figures/Poll_Exp_2024_Plot.png)
 
-## 4.0 Pollination Experiments 2025
+## 4.0 Pollination Experiments 2025 ([Pollinations 2025](Pollinations_2025))
 
 **Matching manuscript sections**
 

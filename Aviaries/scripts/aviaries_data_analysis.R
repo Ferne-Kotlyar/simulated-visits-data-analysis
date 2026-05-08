@@ -1,19 +1,28 @@
 #-------------------------------------------------------------------#
 # This script analyzes pollen tube counts from aviary experiments in
 # 2018 and 2019 in Las Cruces.
-# Last updated by F. Kotlyar 31 Mar 2026
+# Last updated by F. Kotlyar 08 May 2026
 #-------------------------------------------------------------------#
 
 # ---- Load libraries and data ----
 
-library(tidyverse)
-library(lme4)
-library(DHARMa)
-library(emmeans)
-library(officer)
+packages <- c("here", # for setting the working directory
+              "tidyverse", # for data cleaning
+              # (contains ggplot2, dplyr, stringr, tidyr, readr)
+              "officer", # for manipulating word docx
+              "lme4", # for linear mixed effects models
+              "DHARMa", # for checking model assumptions
+              "emmeans") # for calculating odds ratios
 
-# if data get archived elsewhere, need to change this url
-av_data <- read_csv("https://oregonstate.box.com/shared/static/rxu3bflp4yx31bv8u37cmz2lvlwpv6v6.csv")
+for (pkg in packages) {
+  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+# load aviary data
+av_data <- read_csv("./Aviaries/rawdata/aviaries_data.csv")
 
 # subset to just HETO
 av_data <- av_data %>% filter(
@@ -104,8 +113,6 @@ estims_tbl <- estims_tbl %>%
 
 ### ---- saving to word tables ----
 
-library(officer)
-
 doc <- read_docx()
 
 doc <- body_add_table(
@@ -130,7 +137,7 @@ doc <- body_add_table(
   style = "table_template"
 )
 
-print(doc, here::here("Aviaries/results_tables.docx"))
+# print(doc, here::here("Aviaries/results_tables.docx"))
 
 ## ---- figure ----
 
@@ -145,8 +152,4 @@ av_fig <- ggplot(estims_tbl, aes(x = treatment, y = rate)) +
   scale_x_discrete(labels = c("HP" = "Hand pollination", 
                               "RTAH" = "Rufous-tailed", 
                               "GREH" = "Green Hermit"))
-
-
-
-
 

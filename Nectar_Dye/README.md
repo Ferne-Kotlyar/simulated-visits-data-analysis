@@ -1,6 +1,6 @@
 # Nectar Dye Experiment README
 
-Data was collected in March 2025.
+Data were collected in March 2025.
 
 ## Background Information
 

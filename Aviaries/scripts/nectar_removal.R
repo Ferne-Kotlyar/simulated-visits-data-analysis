@@ -1,28 +1,36 @@
 #--------------------------------------------------------------------------#
 # This script analyzes pollen tube counts from nectar removal experiments in
 # 2018 and 2019 in Las Cruces.
-# Last updated by F. Kotlyar 31 Mar 2026
+# Last updated by F. Kotlyar 08 May 2026
 #--------------------------------------------------------------------------#
 
 # ---- Load libraries and data ----
 
-library(tidyverse)
-library(lme4)
-library(DHARMa)
-library(emmeans)
-library(officer)
-library(patchwork)
+packages <- c("here", # for setting the working directory
+              "tidyverse", # for data cleaning
+              # (contains ggplot2, dplyr, stringr, tidyr, readr)
+              "patchwork", # for combining plots
+              "officer", # for manipulating word docx
+              "lme4", # for linear mixed effects models
+              "DHARMa", # for checking model assumptions
+              "emmeans") # for calculating odds ratios
+
+for (pkg in packages) {
+  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
 
 # rerun the aviaries analysis to load figure and reset the results tables
-source(here::here("Aviaries/aviaries_data_analysis.R"))
+source(here::here("Aviaries/scripts/aviaries_data_analysis.R"))
 
 # remove the objects except for the figure
 obs <- ls()
 rm(list = obs[!(obs == "av_fig")])
 
 # now load the nectar removal data
-# if data get archived elsewhere, need to change this url
-hpne <- read_csv("https://oregonstate.box.com/shared/static/66up9hayznrgoj6gwv7qorbihbmroc50.csv") %>%
+hpne <- read_csv("./Aviaries/rawdata/HPvsNE_data.csv") %>%
   janitor::clean_names()
 
 hpne <- hpne %>% 
@@ -76,7 +84,7 @@ doc <- body_add_break(doc)
 
 doc <- body_add_table(doc, emg, style = "table_template")
 
-print(doc, here::here("Aviaries/results_tables.docx"))
+# print(doc, here::here("Aviaries/results_tables.docx"))
 
 ### ---- sample sizes ----
 
