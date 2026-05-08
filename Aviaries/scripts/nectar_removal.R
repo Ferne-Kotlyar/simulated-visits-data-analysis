@@ -9,6 +9,7 @@
 packages <- c("here", # for setting the working directory
               "tidyverse", # for data cleaning
               # (contains ggplot2, dplyr, stringr, tidyr, readr)
+              "janitor", # for data cleaning
               "patchwork", # for combining plots
               "officer", # for manipulating word docx
               "lme4", # for linear mixed effects models
@@ -84,7 +85,7 @@ doc <- body_add_break(doc)
 
 doc <- body_add_table(doc, emg, style = "table_template")
 
-# print(doc, here::here("Aviaries/results_tables.docx"))
+print(doc, here::here("Aviaries/results_tables.docx"))
 
 ### ---- sample sizes ----
 

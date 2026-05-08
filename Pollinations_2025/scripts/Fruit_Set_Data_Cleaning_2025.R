@@ -8,6 +8,8 @@ packages <- c("here", # for setting the working directory
               # (contains ggplot2, dplyr, stringr, tidyr, readr)
               "data.table", # for working with data frames
               "hms", # for formatting time objects
+              "MuMIn", # for calculating rsquared
+              "car", # for running anova
               "lme4", # for linear mixed effects models
               "DHARMa", # for checking model assumptions
               "emmeans") # for calculating odds ratios
