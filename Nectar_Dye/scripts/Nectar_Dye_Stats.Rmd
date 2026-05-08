@@ -42,7 +42,6 @@ fisher.test(table(species_ND$foraging, species_ND$dye_on_rep_strucs))
 fisher.test(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
 
 # Cramer's V for effect size
-library(rstatix)
 cramer_v(table(species_ND$foraging, species_ND$dye_on_anthers_binary))
 cramer_v(table(species_ND$foraging, species_ND$dye_on_stigma_binary))
 cramer_v(table(species_ND$foraging, species_ND$dye_on_stigma_binary))

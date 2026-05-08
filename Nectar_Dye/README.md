@@ -12,6 +12,4 @@ According to 67 slow-motion videos (240 fps) of wild Heliconia tortuosa visitors
 
 We used the two most common traplining species: green hermits (*Phaethornis guy*) and violet sabrewings (*Campylopterus hemileucurus*); and two of the most common territorial species: rufous-tailed (*Amazilia tzacatl*) and crowned woodnymph (*Thalurania colombica*) hummingbirds.
 
-After inserting and extracting bill replicas of different species and sexes, we checked the stigma and anthers for the presence/absence of dye. If there was dye on the stigma it looked like this:
-
-![**Figure 1:** *Heliconia tortuosa* stigma stained with fuchsin dye.](Dyed_Stigma.png)
+After inserting and extracting bill replicas of different species and sexes, we checked the stigma and anthers for the presence/absence of dye.

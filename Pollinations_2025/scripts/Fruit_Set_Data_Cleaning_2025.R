@@ -1,14 +1,23 @@
+###### Script to clean pollination and fruit set data from 2025 ######
+
 # 1.0 Load and Import Data
+## Load Packages (and install if not already installed)
 ## --------------------------------------------------------------------------------
-## 1.1 Load Packages
-## --------------------------------------------------------------------------------
-library(dplyr)
-library(ggplot2)
-library(stringr)
-library(tidyr)
-library(here)
-library(readr)
-library(data.table)
+packages <- c("here", # for setting the working directory
+              "tidyverse", # for data cleaning
+              # (contains ggplot2, dplyr, stringr, tidyr, readr)
+              "data.table", # for working with data frames
+              "hms", # for formatting time objects
+              "lme4", # for linear mixed effects models
+              "DHARMa", # for checking model assumptions
+              "emmeans") # for calculating odds ratios
+
+for (pkg in packages) {
+  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
 
 ## 1.2 Load and Import PRM and Self-Nectar Data
 ## --------------------------------------------------------------------------------

@@ -2,13 +2,19 @@
 
 # Import and Clean Data
 
-## Load Packages 
+## Load Packages (and install if not already installed)
 ## --------------------------------------------------------------------------------
-library(ddimport) # for importing data to the correct folder
-library(dplyr) # for data wrangling
-library(ggplot2) # for plotting
-library(here) # for setting the working directory
-library(tidyverse) # for data cleaning
+packages <- c("here", # for setting the working directory
+              "tidyverse", # for data cleaning
+              "patchwork", # for combining plots
+              "rstatix") # for computing Cramer's V
+
+for (pkg in packages) {
+  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
 
 # Set directory
 ## --------------------------------------------------------------------------------
@@ -16,7 +22,7 @@ setwd(here())
 
 ## Import Data
 ## --------------------------------------------------------------------------------
-species_ND <- read.csv("./Nectar_Dye/rawdata/Nectar_Dye_Experiment.csv", na = "N/A")
+species_ND <- read_csv("./Nectar_Dye/rawdata/Nectar_Dye_Experiment.csv", na = "N/A")
 
 ## Clean Data
 ## --------------------------------------------------------------------------------

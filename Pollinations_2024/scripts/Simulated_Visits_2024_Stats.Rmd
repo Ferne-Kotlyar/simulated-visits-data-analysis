@@ -54,7 +54,6 @@ car::Anova(glmm_PRM_Trio_Strict, type="III", test.statistic="Chisq")
 
 ## 2.2 Check Model Assumptions
 ```{r}
-library(DHARMa)
 sim_res <- simulateResiduals(fittedModel = glmm_PRM_Trio_Strict)
 plot(sim_res)
 
@@ -71,12 +70,8 @@ plotResiduals(sim_res, PRM_Trio_Strict$Patch)
 ## 2.3 Odds Ratio
 ```{r}
 # Pairwise ratios between treatments
-library(emmeans)
-
 emm <- emmeans(glmm_PRM_Trio_Strict, ~ Treatment)
 emm_odds <- pairs(emm, type = "response")  
-  # exponentiates automatically 
-  # (takes the estimate and puts it to the exponent to get the odds)
 emm_odds_df <- as.data.frame(emm_odds)
 emm_odds_CI <- as.data.frame(confint(emm_odds))
 

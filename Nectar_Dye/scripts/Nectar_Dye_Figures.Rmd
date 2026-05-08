@@ -113,9 +113,6 @@ plot_Stigma <- make_foraging_plot(foraging_stigma_prop, "foraging") +
 ## 2.2 Combine Plots
 
 ```{r}
-library(officer)
-library(patchwork)
-
 nectar_dye_plot <-
 plot_RS + plot_Stigma + 
   plot_layout(axes = 'collect')

@@ -1,13 +1,23 @@
-# Load Packages
+###### Script to clean pollination and fruit set data from 2024 ######
+
+## Load Packages (and install if not already installed)
 ## --------------------------------------------------------------------------------
-library(dplyr)
-library(ggplot2)
-library(stringr)
-library(tidyr)
-library(data.table)
-library(here)
-library(readr)
-library(hms)
+packages <- c("here", # for setting the working directory
+              "tidyverse", # for data cleaning
+              # (contains ggplot2, dplyr, stringr, tidyr, readr)
+              "data.table", # for working with data frames
+              "hms", # for formatting time objects
+              "lme4", # for linear mixed effects models
+              "DHARMa", # for checking model assumptions
+              "emmeans") # for calculating odds ratios
+
+for (pkg in packages) {
+  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
+
 
 # Set directory
 ## --------------------------------------------------------------------------------

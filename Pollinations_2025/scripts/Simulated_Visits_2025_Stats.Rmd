@@ -56,8 +56,6 @@ Simulated_Visits_PRM$treatment <- Simulated_Visits_PRM$treatment %>%
          levels = c("ND", "N", "SW", "NN", "Ctrl"))
 
 # Run model
-library(lme4)
-
 glmm_Simulated_Visits_PRM <- glmer(fruit_set_binary ~ treatment + 
                                      (1|plant_id) + (1|patch), 
                                    data = Simulated_Visits_PRM, 
@@ -70,7 +68,6 @@ car::Anova(glmm_Simulated_Visits_PRM, type="III", test.statistic="Chisq")
 
 ## 2.2 Check Model Assumptions
 ```{r}
-library(DHARMa)
 sim_res <- simulateResiduals(fittedModel = glmm_Simulated_Visits_PRM)
 plot(sim_res)
 
@@ -87,7 +84,6 @@ plotResiduals(sim_res, Simulated_Visits_PRM$patch)
 ## 2.3 Odds Ratio
 ```{r}
 # Pairwise ratios between treatments
-library(emmeans)
 
 # Odds ratio
 emm_PRM <- emmeans(glmm_Simulated_Visits_PRM, ~ treatment)
