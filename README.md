@@ -19,7 +19,7 @@ This repository contains 4 main experiments.
 
 Here we show that while pollinator recognition (described by Betts et al., 2015) exists in *Heliconia tortuosa* and is reproducible, however the proposed nectar extraction mechanism is not.
 
-![**Manuscript Figure 2:** **Mean pollen tube abundance following different pollination treatments.** (a) Effect of hand pollination alone vs. hand pollination plus visitation from pollen-free specialist Green Hermits (*Phaethornis guy*) or generalist Rufous-tailed (*Amazilia tzacatl*) hummingbirds. (b) Effect of hand pollination alone vs. hand pollination combined with nectar extraction. Error bars represent ± 1 bootstrapped standard errors.](Figures/av_hpne_results_fig.jpg)
+![**Manuscript Figure 2:** **Mean pollen tube abundance following different pollination treatments.** (a) Effect of hand pollination alone vs. hand pollination plus visitation from pollen-free specialist Green Hermits (*Phaethornis guy*) or generalist Rufous-tailed (*Amazilia tzacatl*) hummingbirds. (b) Effect of hand pollination alone vs. hand pollination combined with nectar extraction. Error bars represent ± 1 bootstrapped standard errors.](Figures/av_hpne_results_fig.png)
 
 ## 2.0 Nectar Dye Experiments
 
