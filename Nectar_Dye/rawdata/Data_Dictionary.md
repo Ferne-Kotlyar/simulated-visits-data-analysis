@@ -4,9 +4,9 @@ Experiments are explained in the README, below the description of the columns of
 
 ## Nectar Dye Experiment
 
-(Nectar_Dye_Experiment.csv)
+**File Name:** Nectar_Dye_Experiment.csv
 
-### Field Variables
+### Column Names
 
 - species: we used 3D printed filament bill replicas of Heliconia tortuosa's 4 most common hummingbird visitors.
   - GREH: green hermit (Phaethornis guy)

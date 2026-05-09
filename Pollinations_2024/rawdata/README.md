@@ -12,11 +12,11 @@ Pollination experiments were conducted in March and April 2024, fruits were moni
 
 ## Raw Data Files
 
-- **Fruit_Set_2024.csv:** Fruit set data taken by Michael Atencio-Picado from May-August 2024. It includes data about the flowers that matured into fruits from all the pollination experiments conducted in 2024.
+- **Fruit_Set_2024.csv:** Fruit set data taken by Michael Atencio-Picado from May-August 2024. It includes data about only the flowers that matured into fruits (fruit weight, number of seeds, treatment, etc.) from all the pollination experiments conducted in 2024.
 
 - **PRM_Trials.csv:** Field data taken by Ferne Kotlyar in March 2024, which includes the pollination data of flowers (treatments, pollination dates, bracts, flower locations, etc.).
 
-- **PRM_Extended.csv:** Field data taken by Michael in April 2024, which same structure as in "PRM_Trials.csv", but with a few differences, see data dictionary for more information.
+- **PRM_Extended.csv:** Field data taken by Michael Atencio-Picado in April 2024, which same structure as in "PRM_Trials.csv", but with the ND (nectar drop) treatment split into 3 different types of pollen: self, near-neighour and far. In PRM_Trials.csv, only far pollen is used.
 
 ## Treatments
 

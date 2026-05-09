@@ -10,7 +10,11 @@ These data were collected by Ferne Kotlyar in the field in Costa Rica with the h
 
 ## Raw Data Files
 
-**Nectar_Dye_Experiment.csv:** Single file containing the flower dye experiment based on bill replicas of different hummingbird species.
+- **Nectar_Dye_Experiment.csv:** Estimate (little, lots, or none) of whether pollen arrived on the anthers or stigma of *H. tortuosa* flowers after visits from 3D printed bills of specialist and generalist species. This data was collected in March, 2025 by Ferne Kotlyar.
+
+  - Specialist species included Green Hermit (*Phaethornis guy*; *n* = 13) and Violet Sabrewing (*Campylopterus hemileucurus*; *n* = 14) hummingbirds;
+
+  - Generalists species included Crowned Woodnymph (*Thalurania colombica*; *n* =14) and Rufous-tailed (*Amazilia tzacatl*; *n* = 14) hummingbirds.
 
 ## Data Collection Methods
 

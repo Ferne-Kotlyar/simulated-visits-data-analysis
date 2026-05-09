@@ -14,9 +14,9 @@ We followed the same methods as described in [Betts et al., 2015](https://www.pn
 
 #### **Aviary Experiment**
 
-- **HP: Hand Pollination.** In this treatment, we applied outcrossed pollen directly to the stigma after cleaning from self-pollen.
-- **GREH: Green Hermit Hummingbirds (*Phaethornis guy*).** Green Hermits were caught with mist nets, cleaned from previous pollen, then released into an aviary with *Heliconia tortuosa* flowers and monitored until they fed from the flowers.
-- **RTAH: Rufous-tailed Hummingbirds (*Amazilia tzacatl*).** Rufous-tailed hummingbirds were caught with mist nets, cleaned from previous pollen, then released into an aviary with *Heliconia tortuosa* flowers and monitored until they fed from the flowers.
+- **HP: Hand Pollination.** In this treatment, we applied outcrossed pollen directly to the stigma of *Heliconia tortuosa* flowers after cleaning from self-pollen.
+- **GREH: Green Hermit Hummingbirds (*Phaethornis guy*).** Green Hermits were caught with mist nets, their bills were cleaned from previous pollen, then released into an aviary with *Heliconia tortuosa* flowers and monitored until they fed from the flowers.
+- **RTAH: Rufous-tailed Hummingbirds (*Amazilia tzacatl*).** Rufous-tailed hummingbirds were caught with mist nets, their bills were cleaned from previous pollen, then released into an aviary with *Heliconia tortuosa* flowers and monitored until they fed from the flowers.
 
 #### **Nectar Extraction Experiment**
 

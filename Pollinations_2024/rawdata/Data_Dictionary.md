@@ -8,7 +8,7 @@ Experiments are explained in the README. Description of variables from each data
 
 Pollination data from the first round of pollinations (March 2024), when the main researcher on this project (Ferne Kotlyar) was still in the field.
 
-### Field Variables
+### Column Names
 
 - Patch: Clusters within or near the Kress Patch.
   - The Kress Patch, named after John Kress, is an open area at the Las Cruces Biological station with many (likely clonal) inflorescences in 3 distinct clusters (denoted by K1, K2, and K3). All pollinations occurred either in one of 3 clusters of the Kress patch or in the "Mike" patch, which was a small cluster close to the Kress patch, containing one open inflorescence.
@@ -41,11 +41,11 @@ Pollination data from the first round of pollinations (March 2024), when the mai
 
 **File Name:** PRM_Extended.csv
 
-Field data taken by Michael in April 2024 that has the same structure as in "PRM_Trials.xlsx". However, some columns were **not** recorded including: Bract_Total, PD_Covered, Coll_Date (usually the day after Poll_Date), Coll_Time, Damage, Style_Collected, Applier_Technique (in this dataset, this was always Michael), Applier_Pollen (again, in this dataset, this was always Michael), Killed, Closed_Date, and Closed_Time.
+Field data taken by Michael in April 2024 that has the same structure as in "PRM_Trials.csv". However, some columns were **not** recorded including: Bract_Total, PD_Covered, Coll_Date (usually the day after Poll_Date), Coll_Time, Damage, Style_Collected, Applier_Technique (in this dataset, this was always Michael), Applier_Pollen (again, in this dataset, this was always Michael), Killed, Closed_Date, and Closed_Time.
 
 Additionally, in this dataset, there were additional treatments. Instead of ND, which in the last dataset (PRM_Trials) were always treated with far pollen, in this dataset, the ND technique was used with self (S), near-neighbour (NN), and far pollen and marked accordingly with ND-S, ND-NN, and ND-Far, respectively.
 
-### Field Variables (different from above)
+### Column Names (different from above)
 
 - Bract: Same as "Bract_Num".
 - Out: Same as "Num_Above_Tape".
@@ -57,7 +57,7 @@ Additionally, in this dataset, there were additional treatments. Instead of ND, 
 
 Final fruit set of **all** fruits that were collected in 2024. Includes fruit and seed details. The column headers are in Spanish in the original datasheet, but are translated into English in the code. This dataset also contains fruits from an additional experiment where only two fruits survived (Stub-Control); these will be removed from the dataset.
 
-### Field Variables
+### Column Names
 
 - Fecha: Date (year-month-day). Date that the fruit was collected and weighed.
 - Obs: Observer. Person that recorded the measurements. In this case, all measurements were taken by MAP: Michael (Mike) Atencio-Picado.

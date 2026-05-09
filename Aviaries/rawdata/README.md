@@ -10,5 +10,5 @@ These data were collected by Dusty Gannon in the field in Costa Rica.
 
 ## Raw Data Files
 
-- **aviaries_data.csv:** File containing aviary experiment data.
-- **HPvsNE_data.csv:** File containing nectar extraction experiment data.
+- **aviaries_data.csv:** Pollination and pollen tube data from the aviary experiment.
+- **HPvsNE_data.csv:** Pollination and pollen tube data from the nectar extraction experiment.

@@ -13,7 +13,7 @@ Pollination experiments were conducted in March and April 2025, fruits were moni
 - **PRM_2025.csv:** Pollination data taken by Ferne Kotlyar in March 2025 which includes the pollination data of flowers (treatments, pollination dates, bracts, flower locations, etc.) for the main experiment.
 - **Fruit_Set_2025.csv:** Fruit set data collected from the PRM 2025 experiment (datasheet above) taken primarily by Michael (Mike) Atencio in April - July 2025.
 - **Self_Nectar_Pollination.csv:** Pollination data for the self-Nectar experiment with 2 treatments (self-nectar and open pollination control) taken by Michael Atencio in April & May 2025.
-- Self_Nectar_Fruit_Set.csv: Fruit set data collected from the self nectar experiment (datasheet above) taken by Michael in June & July 2025.
+- **Self_Nectar_Fruit_Set.csv:** Fruit set data collected from the self nectar experiment (datasheet above) taken by Michael in June & July 2025.
 
 ## Background Information
 
