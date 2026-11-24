@@ -51,7 +51,7 @@ PRM_Summary <- PRM_Summary %>%
   mutate(treatment = factor(treatment, levels = c("Ctrl", "ND", "N", "SW", "NN")))
 
 # Add significance symbols to the PRM_Summary
-PRM_Summary$sigificance <- c("n.s.", "**", "", "**", "**")
+PRM_Summary$sigificance <- c("n.s.", "*", "", "**", "**")
 ```
 
 # 4. Plot

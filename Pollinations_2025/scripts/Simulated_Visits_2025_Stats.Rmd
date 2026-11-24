@@ -145,7 +145,7 @@ fisher.test(table(Simulated_Visits_Nectar$treatment, Simulated_Visits_Nectar$fru
 ```
 There is no difference (at all) between the nectar and self-nectar treatments, therefore we are safe to merge the treatments.
 
-# 3.4 Run GLMM Model
+## 3.4 Run GLMM Model
 
 This is the same model as above, only with the addition of the self-nectar treatment and the associated self-nectar controls.
 
@@ -166,7 +166,7 @@ MuMIn::r.squaredGLMM(glmm_Simulated_Visits)
 car::Anova(glmm_Simulated_Visits, type="III", test.statistic="Chisq")
 ```
 
-# 3.5 Check Model Assumptions
+## 3.5 Check Model Assumptions
 ```{r}
 sim_res <- simulateResiduals(fittedModel = glmm_Simulated_Visits)
 plot(sim_res)
